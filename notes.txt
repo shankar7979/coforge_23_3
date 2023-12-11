@@ -183,7 +183,62 @@ do .. while loop
    int ar1[][]=new int[3][4]
 
 
+   Write a java program to implement Bank-SB-Account Class 
+   with a constructor to initilize acct_no, customer_name, trans_type, trans_amount,bal_amount data members.
+
+     Create member functions to update the balance amount based on the type of transaction(deposit, withdrawal) and show the customer information with the new balance amount.
+
+Inside main 
+Input account_no,customer_name,trans_type and balance amount:
+
+Output 
+"Account no:  12122
+Customer name: Raj
+Transaction type:  Deposit
+Transaction amount: Rs. 7000.00
+Balance amount:   Rs. 25000.00
+New Balance:   Rs. 32000.00"
+
+
+
+
+
+
+
+
+Encapsulation 
+  1. all attributes should be private 
+
+
+  2.  attributes will be used outside using public getter and setter method
+
+
+  attributes -- data
+
+  methods    -- code 
+
+  bind  -- code+ data   -- Encapsulation
+
+
+
+java.lang.System 
+     -- out is static variable of PrintStream class 
+
+  --PrintStream class  we have print method
+
+
+  static import
+
+   import the static members 
+
    
+
+
+
+
+
+
+
 
 
 
