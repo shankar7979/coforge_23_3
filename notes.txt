@@ -235,6 +235,37 @@ java.lang.System
 
 
 
+super() -- super class constructor
+this()  -- current class constructor
+
+super -- call super class method, variables 
+this -- call current class method, variables 
+
+
+  in any class default constructor is added 
+
+  if there is parameterized constructor then no default constructor is added 
+
+ in inheritance using super keyword we need to call superclass constructor with super(args) ;
+
+
+
+static methods are inherited.
+
+
+
+overriding 
+
+  in subclass if you are changing the behaviour of super class method 
+
+  
+
+
+
+
+
+
+
 
 
 
