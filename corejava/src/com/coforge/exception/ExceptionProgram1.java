@@ -33,10 +33,7 @@ public class ExceptionProgram1 {
 //			 System.err.println(e.getMessage());
 //		}
 
-		catch (Exception e) {
-			System.out.println("some error");
-			e.printStackTrace();
-		}
+		
 		System.out.println("program ends ");
 
 	}
