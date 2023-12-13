@@ -16,24 +16,22 @@ public class HighSchoolTeacher extends Teacher {
 	public float getHra() {
 		return hra;
 	}
-	
+
 	@Override
-	public void teacherInfo() {
+	void teacherInfo() {
 		super.teacherInfo();
-		
-		System.out.println("\tpf "+getPf());
-		System.out.println("\thra "+getHra());
-		System.out.println("\tnet salary  "+(getSalary()-(getSalary()*getPf())+(getSalary()*getHra())));
+
+		System.out.println("\tpf " + getPf());
+		System.out.println("\thra " + getHra());
+		System.out.println("\tnet salary  " + (getSalary() - (getSalary() * getPf()) + (getSalary() * getHra())));
 	}
-	
-	
+
 	public static void main(String[] args) {
-		
-		HighSchoolTeacher teacher=new HighSchoolTeacher(565656, "sunil kumar", 25000, 0.05f, 0.08f);
-		
+
+		HighSchoolTeacher teacher = new HighSchoolTeacher(565656, "sunil kumar", 25000, 0.05f, 0.08f);
+
 		teacher.teacherInfo();
-		
-		
+
 	}
 
 }

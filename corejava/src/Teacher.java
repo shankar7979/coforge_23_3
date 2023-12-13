@@ -23,7 +23,7 @@ public class Teacher {
 		return salary;
 	}
 
-	public void teacherInfo() {
+	 void teacherInfo() {
 		System.out.println("Teacher data ");
 		System.out.println("\tid  " + getId());
 		System.out.println("\tname  " + getName());
