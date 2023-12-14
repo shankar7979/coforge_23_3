@@ -3,7 +3,7 @@ package edu.coforge.collection.util;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.coforge.model.Employee;
+import edu.coforge.collection.model.Employee;
 
 public class EmployeeOperation {
 

@@ -1,6 +1,6 @@
 package edu.coforge.collection.main;
 
-import com.coforge.model.Employee;
+import edu.coforge.collection.model.Employee;
 
 import edu.coforge.collection.util.EmployeeOperation;
 
@@ -17,14 +17,17 @@ public class EmployeeMain {
 		
 		System.out.println("==== add operation=== ");
 		
-		for (int i = 0; i < sal.length; i++) {
-			employee[i]=new Employee(id[i], nm[i],sal[i] );
+		for (int i = 0; i < employee.length; i++) {
+			employee[i]=new Employee();
+			employee[i].setEmpId(id[i]);
+			employee[i].setEmpName(nm[i]);
+			employee[i].setEmpSalary(sal[i]);
 			operation.addEmployee(employee[i]);
 		}
 		
 		System.out.println("==== all employee operation=== ");
 		for (Employee  e : operation.getAllEmployee()) {
-			System.out.println(e.getId()+"\t"+e.getName()+"\t"+e.getSalary());
+			System.out.println(e);
 		}
 		
 	}
