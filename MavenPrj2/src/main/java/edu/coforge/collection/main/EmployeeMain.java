@@ -30,5 +30,26 @@ public class EmployeeMain {
 			System.out.println(e);
 		}
 		
+		System.out.println("delete operation ");
+		
+		operation.removeEmployee(1);
+		operation.removeEmployee(employee[3]);
+		
+		System.out.println("==== after delete all employee operation=== ");
+		for (Employee  e : operation.getAllEmployee()) {
+			System.out.println(e);
+		}
+		
+		System.out.println("=====search operation====");
+		
+		System.out.println(operation.searchEmployee(employee[0]));
+		System.out.println(operation.searchEmployee(employee[3]));
+		
+		if(operation.searchEmployee(employee[0])==null)
+			System.out.println("search not found");
+		else
+			System.out.println("found "+operation.searchEmployee(employee[0]));
+		
+		
 	}
 }
