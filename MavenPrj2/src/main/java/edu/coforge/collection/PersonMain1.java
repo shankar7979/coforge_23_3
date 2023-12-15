@@ -28,9 +28,16 @@ public class PersonMain1 {
 			}
 		};
 		
+		Comparator<Person> comparator1 =(o1,o2)-> o1.getName().compareTo(o2.getName());
+		
 		Arrays.sort(person,comparator);
 		System.out.println("sort by id ");
 		display(person);
+		
+		Arrays.sort(person,comparator1);
+		System.out.println("sort by name ");
+		display(person);
+		
 
 	}
 
