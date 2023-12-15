@@ -34,5 +34,12 @@ public class ListPrg2 {
 		
 		Collections.shuffle(list1);
 		System.out.println(list1);
+		
+		Collection<String> unmodifiableCollection = 
+				Collections.unmodifiableCollection(list1);
+		
+		//unmodifiableCollection.add("hello");
+		
+		
 	}
 }
