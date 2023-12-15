@@ -3,6 +3,7 @@ package edu.coforge.collection;
 import java.util.Collection;
 import java.util.Hashtable;
 import java.util.Map;
+import java.util.Map.Entry;
 import java.util.Set;
 
 public class MapPrg1 {
@@ -37,7 +38,14 @@ public class MapPrg1 {
 		for(Integer key:keySet)
 			System.out.println(key+"  "+map.get(key));
 		
+		System.out.println("using entryset ");
 		
+		Set<Entry<Integer, String>> entrySet = map.entrySet();
+		
+		// Entry -- key+value
+		
+		for(Entry<Integer, String> entry:entrySet)
+			System.out.println(entry.getKey()+"  "+entry.getValue());
 		
 	}
 }
