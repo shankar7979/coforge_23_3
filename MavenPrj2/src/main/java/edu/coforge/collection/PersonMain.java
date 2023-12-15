@@ -9,6 +9,14 @@ class SortById implements Comparator<Person>{
 		return Integer.valueOf(o1.getId()).compareTo(Integer.valueOf(o2.getId()));
 	}
 }
+
+class SortByName implements Comparator<Person>{
+	@Override
+	public int compare(Person o1, Person o2) {
+		return o1.getName().compareTo(o2.getName());
+	}
+}
+
 class SortById1 implements Comparator<Person>{
 	@Override
 	public int compare(Person o1, Person o2) {
@@ -18,7 +26,6 @@ class SortById1 implements Comparator<Person>{
 
 public class PersonMain {
 static void display(Person[] p) {
-	System.out.println("\n Person data ");
 	for (Person person : p) {
 		System.out.println(person);
 	}
@@ -34,12 +41,16 @@ static void display(Person[] p) {
 		}
 		display(person);
 		
-		System.out.println("sorted by id in ascending order");
+		System.out.println("\nsorted by id in ascending order\n");
 		Arrays.sort(person,new SortById());
 		display(person);
 		
-		System.out.println("sorted by id in descending order");
+		System.out.println("\nsorted by id in descending order\n");
 		Arrays.sort(person,new SortById1());
+		display(person);
+		
+		System.out.println("\nsorted by name in ascending order\n");
+		Arrays.sort(person,new SortByName());
 		display(person);
 		
 	}
