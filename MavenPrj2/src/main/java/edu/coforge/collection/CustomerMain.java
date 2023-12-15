@@ -15,7 +15,7 @@ public class CustomerMain {
 		for (int i = 0; i < customer.length; i++) {
 			customer[i]=new Customer(id[i], nm[i], sal[i]);
 		}
-		System.out.println(Arrays.toString(customer));
+		
 		
 		Arrays.sort(customer);
 		//java.lang.ClassCastException: class edu.coforge.collection.Customer cannot be
