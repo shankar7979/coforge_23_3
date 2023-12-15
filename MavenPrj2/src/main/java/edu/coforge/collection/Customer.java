@@ -19,13 +19,19 @@ public class Customer  implements Comparable<Customer>{
 				+ customerSalary + "]";
 	}
 
+//	@Override
+//	public int compareTo(Customer o) {
+//		if(this.customerId<o.customerId)
+//		return -1;
+//		else	if(this.customerId>o.customerId)
+//			return 1;
+//		else 
+//			return 0;
+//	}	
+	
 	@Override
 	public int compareTo(Customer o) {
-		if(o.customerId<this.customerId)
-		return -1;
-		else	if(o.customerId>this.customerId)
-			return 1;
-		else 
-			return 0;
-	}	
+//		return new Integer(this.customerId).compareTo(new Integer(o.customerId));
+		return Integer.valueOf(this.customerId).compareTo(Integer.valueOf(o.customerId));
+	}
 }

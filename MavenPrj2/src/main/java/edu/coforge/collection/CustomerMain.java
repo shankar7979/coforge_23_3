@@ -8,7 +8,7 @@ public class CustomerMain {
 		
 		Customer customer[]=new Customer[4];
 		
-		int id[]= {20001,10001,30001,10002,10003};
+		int id[]= {10002,10001,10003,10007,1006};
 		String nm[]= {"suman kumar","aman kumar","ram kumar","anil kumar",	"sunil kumar"};
 		float sal[]= {20000,34000,90000,12000,45000};
 		
