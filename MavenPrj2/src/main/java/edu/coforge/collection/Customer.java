@@ -24,7 +24,7 @@ public class Customer  implements Comparable<Customer>{
 		if(o.customerId<this.customerId)
 		return -1;
 		else	if(o.customerId>this.customerId)
-			return -1;
+			return 1;
 		else 
 			return 0;
 	}	
