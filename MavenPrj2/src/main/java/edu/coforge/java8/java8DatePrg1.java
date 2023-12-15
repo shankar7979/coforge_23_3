@@ -1,6 +1,7 @@
 package edu.coforge.java8;
 
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.time.temporal.ChronoUnit;
 
 public class java8DatePrg1 {
@@ -13,7 +14,26 @@ public class java8DatePrg1 {
 		System.out.println(LocalDate.now());
 		
 		System.out.println(date);
+		
+		DateTimeFormatter formatter=
+				DateTimeFormatter.ofPattern("dd-MM-yyyy");
+			
+		String format = formatter.format(date);
 
+		System.out.println("dd-MM-yyyy format "+format);
+		System.out.println
+		(DateTimeFormatter.ofPattern("dd-MMM-yyyy").format(date));
+		
+		System.out.println
+		(DateTimeFormatter.ofPattern("dd-MMMM-yyyy").format(date));
+		
+		System.out.println
+		(DateTimeFormatter.ofPattern("dd-MMMM-yyyy E").format(date));
+		//M month , G - Era, E - day name
+		
+		System.out.println
+		(DateTimeFormatter.ofPattern("dd-MMMM-yyyy EEEE G").format(date));
+		
 		LocalDate date1 = date.plus(10,ChronoUnit.DAYS);
 		
 		System.out.println(date1);
