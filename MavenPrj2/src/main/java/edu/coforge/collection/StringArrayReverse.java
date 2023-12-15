@@ -23,7 +23,5 @@ public class StringArrayReverse {
 		
 		Arrays.sort(nm,new Reverse());
 		System.out.println("sorted in reverse  "+Arrays.toString(nm));
-		
 	}
-	
 }
