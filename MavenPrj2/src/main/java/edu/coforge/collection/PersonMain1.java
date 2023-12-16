@@ -27,17 +27,16 @@ public class PersonMain1 {
 				return Integer.valueOf(o1.getId()).compareTo(Integer.valueOf(o2.getId()));
 			}
 		};
-		
-		Comparator<Person> comparator1 =(o1,o2)-> o1.getName().compareTo(o2.getName());
-		
-		Arrays.sort(person,comparator);
+
+		Comparator<Person> comparator1 = (o1, o2) -> o1.getName().compareTo(o2.getName());
+
+		Arrays.sort(person, comparator);
 		System.out.println("sort by id ");
 		display(person);
-		
-		Arrays.sort(person,comparator1);
+
+		Arrays.sort(person, comparator1);
 		System.out.println("sort by name ");
 		display(person);
-		
 
 	}
 
