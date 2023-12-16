@@ -21,8 +21,11 @@ public class StreamPrg1 {
 		System.out.println("using filter and sorting \n");
 
 		Stream.of(ar).filter(a -> a % 2 == 0).sorted().forEach(a -> System.out.print(a + ",  "));
-
-		 
+	
+		System.out.println("\n");
+		Stream.of(ar).forEach(a -> System.out.print(a + ",  "));
+		System.out.println("\n");
+		Stream.of(ar).map(a->a*a).forEach(a -> System.out.print(a + ",  "));
 		
 		
 	}
