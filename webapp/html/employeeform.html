@@ -8,7 +8,7 @@
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
     <style>
-        form{
+        form {
             margin-left: 500px;
             margin-top: 50px;
             background-color: whitesmoke;
@@ -16,21 +16,24 @@
             padding: 20px;
             border: solid;
         }
-        label{
-            width: 110px;
+
+        label {
+            width: 140px;
             float: left;
-        }        
-        input{
+        }
+
+        input {
             width: 140px;
             margin-top: 5px;
         }
     </style>
 </head>
+
 <body>
     <form>
         <div>
             <label>Enter Id</label>
-            <input>
+            <input required="required">
         </div>
         <div>
             <label>Enter Name</label>
@@ -38,7 +41,51 @@
         </div>
         <div>
             <label>Enter Age</label>
-            <input>
-        </div></form>
+            <input type="number">
+        </div>
+
+        <div>
+            <label>Enter Date Of Birth</label>
+            <input type="date">
+        </div>
+
+        <div>
+            <label>Enter Login Time</label>
+            <input type="time">
+        </div>
+
+        <div>
+            <label>Enter Email</label>
+            <input type="email">
+        </div>
+
+        <div style="margin-top: 10px;">
+
+            <div>
+                <label style="font-weight: bold;">Hobbies</label>
+            </div>
+            <br>
+            <div>
+                <input type="checkbox" value="carrom">Carrom
+            </div>
+            <div>
+                <input type="checkbox" value="music">Music
+            </div>
+            <div>
+                <input type="checkbox" value="movie">Movie
+            </div>
+
+            <div>
+                <input type="checkbox" value="reading">Reading
+            </div>
+        </div>
+
+        <div style="margin-top: 10px;">
+            <input type="submit" value="Login">
+            <input type="reset" value="cancel">
+        </div>
+    </form>
+
 </body>
+
 </html>
