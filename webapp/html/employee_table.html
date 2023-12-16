@@ -19,7 +19,8 @@
             border: solid 5px red;
             padding: 10px;
         }
-        img{
+
+        img {
             border: dotted;
             width: 300px;
             height: 200px;
@@ -30,47 +31,48 @@
 <body>
     <h1> Employee Table </h1>
     <table style="border:solid;padding:20px;margin-left:300px; width: 50%;">
-        <tr>
-            <td>10001</td>
-            <td>Ram Kumar</td>
-            <td>12000</td>
-        </tr>
-
-        <tr>
-            <td>10001</td>
-            <td>Ram kumar</td>
-            <td>12000</td>
-        </tr>
 
         <thead>
             <tr>
-                <th>Id</th>
-                <th>Name</th>
-                <th>Salary</th>
+                <th rowspan="2">Id</th>
+                <th colspan="2">Name</th>
+                <th rowspan="2">Salary</th>
             </tr>
+            <tr>
+                <th>FName</th>
+                <th>LName</th>
+            </tr>
+
         </thead>
-
         <tr>
             <td>10001</td>
-            <td>Ram kumar</td>
-            <td>12000</td>
-        </tr>
-        <tr>
-            <td>10001</td>
-            <td>Ram kumar</td>
-            <td>12000</td>
-        </tr>
-        <tr>
-            <td>10001</td>
-            <td>Ram kumar</td>
+            <td>Ram</td>
+            <td> Kumar</td>
             <td>12000</td>
         </tr>
 
+        <tr>
+            <td>10001</td>
+            <td>Ram</td>
+            <td> Kumar</td>
+            <td>12000</td>
+        </tr>
+        <tr>
+            <td>10001</td>
+            <td>Ram</td>
+            <td> Kumar</td>
+            <td>12000</td>
+        </tr>
+        <tr>
+            <td>10001</td>
+            <td>Ram</td>
+            <td> Kumar</td>
+            <td>12000</td>
+        </tr>
         <tfoot>
             <tr>
-                <td>End of table </td>
+                <td colspan="4">End of table </td>
             </tr>
-
         </tfoot>
         <tr>
             <td>10001</td>
