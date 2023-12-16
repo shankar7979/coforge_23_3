@@ -26,8 +26,20 @@ public class EmployeeMain {
 		}
 
 		empList.stream().forEach(a->System.out.println(a));
-		System.out.println();
+		
+		System.out.println("all  employee list ");
+		
 		empList.stream().forEach(a->System.out.println(a.getEmpId()+"\t"+a.getEmpName()+"\t"+a.getEmpSalary()));
+				
+		System.out.println("3 employee list  ");
+		
+		empList.stream().limit(3).forEach(a->System.out.println(a.getEmpId()+"\t"+a.getEmpName()+"\t"+a.getEmpSalary()));
+		
+		System.out.println(" employee list skip first 2  ");
+		empList.stream().skip(2).forEach(a->System.out.println(a.getEmpId()+"\t"+a.getEmpName()+"\t"+a.getEmpSalary()));
+		
+		System.out.println("salary greater than 40 thousands ");
+		empList.stream().filter(a->a.getEmpSalary()>40000).forEach(a->System.out.println(a.getEmpId()+"\t"+a.getEmpName()+"\t"+a.getEmpSalary()));
 		
 		
 	}
