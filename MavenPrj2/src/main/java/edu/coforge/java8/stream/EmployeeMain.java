@@ -1,6 +1,7 @@
 package edu.coforge.java8.stream;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 
 import edu.coforge.collection.model.Employee;
@@ -40,6 +41,22 @@ public class EmployeeMain {
 		
 		System.out.println("salary greater than 40 thousands ");
 		empList.stream().filter(a->a.getEmpSalary()>40000).forEach(a->System.out.println(a.getEmpId()+"\t"+a.getEmpName()+"\t"+a.getEmpSalary()));
+		
+	System.out.println("sort by id ");
+	
+	Comparator<Employee> comparator=( o1, o2)-> Integer.valueOf(o1.getEmpId()).compareTo(Integer.valueOf(o2.getEmpId())); 
+			
+	
+		empList.stream().sorted(comparator).forEach(a->System.out.println(a.getEmpId()+"\t"+a.getEmpName()+"\t"+a.getEmpSalary()));
+		
+		
+		System.out.println("sort by name ");
+		
+		Comparator<Employee> comparator1=( o1, o2)-> (o1.getEmpName()).compareTo((o2.getEmpName())); 
+		
+		empList.stream().sorted(comparator1).forEach(a->System.out.println(a.getEmpId()+"\t"+a.getEmpName()+"\t"+a.getEmpSalary()));
+		
+		
 		
 		
 	}
