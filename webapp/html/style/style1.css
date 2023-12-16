@@ -1,0 +1,21 @@
+form {
+    margin-left: 500px;
+    margin-top: 50px;
+    background-color: whitesmoke;
+    width: 30%;
+    padding: 20px;
+    border: solid;
+}
+
+label {
+    width: 140px;
+    float: left;
+}
+input {
+    width: 140px;
+    margin-top: 5px;
+}
+h2{
+   text-decoration: line-through;
+   text-transform: uppercase;   
+}
