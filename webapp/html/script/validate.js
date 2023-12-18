@@ -19,7 +19,8 @@ function employee_validate() {
     }
 
     if (id == '') {
-        alert('id is blank')
+        //alert('id is blank')
+        document.getElementById('id_err').innerHTML='id is blank'
         document.getElementById('id').style.border = "2px solid red"
 
         return false
