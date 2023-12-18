@@ -10,7 +10,7 @@ function employee_validate() {
 
     console.log("gender .."+gender[0].value)
     console.log("gender ."+gender[1].value)
-    
+
     var gstatus=false
     for(var x=0;x<gender.length;x++){
         if(gender[x].checked){
@@ -63,12 +63,10 @@ function employee_validate() {
     
     else if (gstatus==false) {
         alert('select the gender')
-        document.getElementById('email').style.border = "2px solid red";
+        document.getElementById('email').style.border = "1px solid black";
+        document.getElementById('gender1').style.border = "2px solid red";
         return false
     }
-
-
-
     else {
         return true
     }
