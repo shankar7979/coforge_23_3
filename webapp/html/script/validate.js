@@ -6,6 +6,17 @@ function employee_validate() {
     var dob = document.getElementById("dob").value
     var email = document.getElementById("email").value
     var time = document.getElementById("time").value
+    var gender = document.getElementsByName("gender")
+
+    console.log("gender .."+gender[0].value)
+    console.log("gender ."+gender[1].value)
+    
+    var gstatus=false
+    for(var x=0;x<gender.length;x++){
+        if(gender[x].checked){
+          gstatus=true;
+        }
+    }
 
     if (id == '') {
         alert('id is blank')
@@ -49,6 +60,13 @@ function employee_validate() {
         document.getElementById('email').style.border = "2px solid red";
         return false
     }
+    
+    else if (gstatus==false) {
+        alert('select the gender')
+        document.getElementById('email').style.border = "2px solid red";
+        return false
+    }
+
 
 
     else {
