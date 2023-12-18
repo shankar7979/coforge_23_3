@@ -10,12 +10,15 @@ function employee_validate(){
     if(id=='')
     {
         alert('id is blank')
+        document.getElementById('id').style.border="red"
         return false
     }
     
     else if(name=='')
     {
         alert('name is blank')
+        document.getElementById('id').style.borderColor="black"
+        document.getElementById('name').style.borderColor="red"
         return false
     }
     else{
