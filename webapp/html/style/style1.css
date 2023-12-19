@@ -19,3 +19,6 @@ h2{
    text-decoration: line-through;
    text-transform: uppercase;   
 }
+span{
+    color:red; 
+}
