@@ -15,9 +15,17 @@
             alert($('#id1').text())
             $('#id1').text('<h1>Hello World</h1>')
 
-            $('#id1').click(function(){
+            $('#id1').click(function () {
                 $('#id1').html('<h1>we all are coforge employee</h1>')
             })
+
+            $('#button1').click(function () {
+                $('#id1').hide()
+            }
+            $('#button2').click(function () {
+                $('#id1').show()
+            }
+            )
         })
     </script>
 </head>
@@ -26,6 +34,10 @@
     <div id="id1">
         we are learning jquery
     </div>
+
+    <button id="button1">hide</button>
+    <button id="button2">show</button>
+
 </body>
 
 </html>
