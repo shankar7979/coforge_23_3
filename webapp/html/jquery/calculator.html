@@ -15,11 +15,18 @@
 
             $('#addition').click(
                 function () {
-                    if ($('#n1').val() == '')
-                        alert('no1 is blank')
-                    else if ( $('#n2').val() == '')
-                        alert('no2 is blank')
+                    if ($('#n1').val() == ''){
+                        //alert('no1 is blank')
+                       $('#err_n1').text('no1 is blank').css('background','yellow').
+                       css('border','1px solid red')
+                    }
+                    else if ( $('#n2').val() == ''){
+                        //alert('no2 is blank')
+                        $('#err_n1').text('')
+                        $('#err_n2').text('no2 is blank')
+                    }
                     else {
+                        $('#err_n2').text('')
                  $('#n3').val(parseFloat($('#n1').val()) +parseFloat( $('#n2').val()));
                     }
                 }
@@ -47,16 +54,19 @@
         <div>
             <label>Enter No1</label>
             <input id="n1">
+            <span id="err_n1"></span>
         </div>
 
         <div>
             <label>Enter No2</label>
             <input id="n2">
+            <span id="err_n2"></span>
         </div>
 
         <div>
             <label>Result</label>
             <input id="n3">
+
         </div>
 
         <div>
