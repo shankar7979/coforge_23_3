@@ -6,15 +6,20 @@ function employee_validate() {
     var dob = document.getElementById("dob").value
     var email = document.getElementById("email").value
     var time = document.getElementById("time").value
+
     var gender = document.getElementsByName("gender")
-
-    console.log("gender .."+gender[0].value)
-    console.log("gender ."+gender[1].value)
-
+    var hobby = document.getElementsByName("hobby")
+   
     var gstatus=false
     for(var x=0;x<gender.length;x++){
         if(gender[x].checked){
           gstatus=true;
+        }
+    }
+    var hstatus=false
+    for(var x=0;x<hobby.length;x++){
+        if(hobby[x].checked){
+          hstatus=true;
         }
     }
 
@@ -41,21 +46,33 @@ function employee_validate() {
     }
     else if (age == '') {
         //alert('age is blank')
+        document.getElementById('name_err').innerHTML=''
         document.getElementById('age_err').innerHTML='age is blank'
         document.getElementById('name').style.border = "1px solid black"
         document.getElementById('age').style.border = "2px solid red";
         return false
     }
+    else if (dob == '') {
+        //alert('dob is blank')
+        document.getElementById('age_err').innerHTML=''
+        document.getElementById('date_err').innerHTML='dob is blank'
+        document.getElementById('age').style.border = "1px solid black"
+        document.getElementById('dob').style.border = "2px solid red";
+        return false
+    }
+
     else if (time == '') {
         //alert('login time is blank')
         document.getElementById('time').style.border = "2px solid red"
-        document.getElementById('age').style.border = "1px solid black";
+        document.getElementById('date_err').style.border = "1px solid black";
         document.getElementById('time_err').innerHTML='login time is blank'
+        document.getElementById('date_err').innerHTML=''
         return false
     }
     
     else if (email == '') {
         //alert('email is blank')
+        document.getElementById('time_err').innerHTML=''
         document.getElementById('time').style.border = "1px solid black"
         document.getElementById('email').style.border = "2px solid red";
         document.getElementById('email_err').innerHTML='email is blank'
@@ -70,9 +87,19 @@ function employee_validate() {
     
     else if (gstatus==false) {
         //alert('select the gender')
+        document.getElementById('email_err').innerHTML=''
         document.getElementById('gender_err').innerHTML='select the gender'
         document.getElementById('email').style.border = "1px solid black";
         document.getElementById('gender1').style.border = "2px solid red";
+        return false
+    }
+    else if (hstatus==false) {
+        //alert('select the hobbies')
+        
+        document.getElementById('gender_err').innerHTML=''
+        document.getElementById('hobby_err').innerHTML='select the hobbies'
+        document.getElementById('gender1').style.border = "1px solid black";
+        document.getElementById('hobby_err').style.border = "2px solid red";
         return false
     }
     else {
