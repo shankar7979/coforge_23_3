@@ -39,8 +39,9 @@ public class EmployeeOperation extends HttpServlet {
 			throws ServletException, IOException {
 
 		PrintWriter out = response.getWriter();
-
 		String search = request.getParameter("search");
+		response.setContentType("text/html");
+
 		if (search.equals("id")) {
 			int id = Integer.parseInt(request.getParameter("id"));
 			try {
@@ -49,6 +50,8 @@ public class EmployeeOperation extends HttpServlet {
 
 				if (resultSet.next()) {
 					out.print("Record found for the id " + id);
+					out.print("<br>id\tname\tsalary\tdob");
+
 					out.print("<br>" + resultSet.getInt(1) + "\t" + resultSet.getString(2) + "\t"
 							+ resultSet.getFloat(3) + "\t" + resultSet.getDate(4));
 				} else
@@ -61,6 +64,20 @@ public class EmployeeOperation extends HttpServlet {
 		}
 
 		if (search.equals("all")) {
+
+			try {
+				statement = connection.createStatement();
+				resultSet = statement.executeQuery("select * from employee");
+
+				out.print("<br>id\tname\tsalary\tdob");
+				while (resultSet.next()) {
+					out.print("<br>" + resultSet.getInt(1) + "\t" + resultSet.getString(2) + "\t"
+							+ resultSet.getFloat(3) + "\t" + resultSet.getDate(4));
+				}
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 
 		}
 
