@@ -24,6 +24,13 @@ public class MyServlet1 extends HttpServlet {
 		System.out.println("service called"); 
 		PrintWriter out = response.getWriter();
 		out.print("<br>My First servlet");
+		
+		String id = request.getParameter("id");
+		String name = request.getParameter("name");
+		
+		out.print("<br>Id is "+id);
+		out.print("<br>name is "+name);
+		
 	}
 
 	@Override
