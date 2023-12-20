@@ -19,10 +19,8 @@ import javax.servlet.http.HttpServletResponse;
 		@WebInitParam(name = "company",value ="coforge" ),
 		@WebInitParam(name = "state",value ="up" )
 })
-
 public class MyServlet1 extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	
 	String country, company_name,state_name;
 	
 	@Override
@@ -32,7 +30,6 @@ public class MyServlet1 extends HttpServlet {
 	company_name=config.getInitParameter("company");
 	state_name=config.getInitParameter("state");
 	}
-     //doGet
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 	 
 		System.out.println("service called"); 
@@ -41,7 +38,6 @@ public class MyServlet1 extends HttpServlet {
 		
 		String id = request.getParameter("id");
 		String name = request.getParameter("name");
-//		String hobby = request.getParameter("hobby");
 		String hobby[] = request.getParameterValues("hobby");
 		
 		out.print("<br>Id is "+id);
