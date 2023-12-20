@@ -8,12 +8,15 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
+import javax.naming.InitialContext;
+import javax.naming.NamingException;
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.sql.DataSource;
 
 @WebServlet("/EmployeeOperation")
 public class EmployeeOperation extends HttpServlet {
@@ -27,9 +30,18 @@ public class EmployeeOperation extends HttpServlet {
 	@Override
 	public void init(ServletConfig config) throws ServletException {
 		try {
-			DriverManager.registerDriver(new com.mysql.cj.jdbc.Driver());
-			connection = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/coforge", "root", "mysql");
-		} catch (SQLException e) {
+//			DriverManager.registerDriver(new com.mysql.cj.jdbc.Driver());
+//			connection = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/coforge", "root", "mysql");
+//			
+			
+			DataSource dataSource;
+			InitialContext context=new InitialContext();
+			dataSource=(DataSource) context.lookup("java:comp/env/jdbc/data1");
+			
+			connection=dataSource.getConnection();
+			
+			
+		} catch ( NamingException | SQLException e) {
 			e.printStackTrace();
 		}
 
