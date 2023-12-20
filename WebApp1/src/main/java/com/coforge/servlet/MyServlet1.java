@@ -2,6 +2,7 @@ package com.coforge.servlet;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.stream.Stream;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -10,13 +11,19 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
  
-@WebServlet("/MyServlet1")
+//@WebServlet("/MyServlet1")
+//@WebServlet("/UserData")
+@WebServlet(urlPatterns = { "/UserData","/MyServlet1"})
+
 public class MyServlet1 extends HttpServlet {
 	private static final long serialVersionUID = 1L;
+	
+	String country;
 	
 	@Override
 	public void init() throws ServletException {
 	System.out.println("init called"); 
+	country="india";
 	}
      //doGet
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -40,8 +47,12 @@ public class MyServlet1 extends HttpServlet {
 			out.print("<li>"+string);
 		}
 		
-		out.print("</ol> <p> ");
+		out.print("</ol> <p>  <ul>");
 		
+		Stream.of(hobby).forEach(a->out.print("<li>"+a));
+		out.print("</ul>");
+		
+		out.print("<br>Country is "+country);
 		String qstring=request.getQueryString();
 		
 		out.print("<br> Query String  is "+qstring);
