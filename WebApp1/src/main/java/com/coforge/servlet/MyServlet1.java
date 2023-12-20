@@ -4,7 +4,9 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.stream.Stream;
 
+import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebInitParam;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -13,17 +15,22 @@ import javax.servlet.http.HttpServletResponse;
  
 //@WebServlet("/MyServlet1")
 //@WebServlet("/UserData")
-@WebServlet(urlPatterns = { "/UserData","/MyServlet1"})
+@WebServlet(urlPatterns = { "/UserData","/MyServlet1"}, initParams = {
+		@WebInitParam(name = "company",value ="coforge" ),
+		@WebInitParam(name = "state",value ="up" )
+})
 
 public class MyServlet1 extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	
-	String country;
+	String country, company_name,state_name;
 	
 	@Override
-	public void init() throws ServletException {
+	public void init(ServletConfig config) throws ServletException {
 	System.out.println("init called"); 
 	country="india";
+	company_name=config.getInitParameter("company");
+	state_name=config.getInitParameter("state");
 	}
      //doGet
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -39,6 +46,8 @@ public class MyServlet1 extends HttpServlet {
 		
 		out.print("<br>Id is "+id);
 		out.print("<br>Name is "+name);
+		out.print("<br>Company Name is "+company_name);
+		out.print("<br>State Name is "+state_name);
 		out.print("<br><br>Hobbies are  ");
 
 		out.print("<ol>  ");
