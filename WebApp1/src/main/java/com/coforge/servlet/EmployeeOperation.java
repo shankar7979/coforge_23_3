@@ -51,9 +51,7 @@ public class EmployeeOperation extends HttpServlet {
 				if (resultSet.next()) {
 					out.print("Record found for the id " + id);
 					out.print("<br>id\tname\tsalary\tdob");
-
-					out.print("<br>" + resultSet.getInt(1) + "\t" + resultSet.getString(2) + "\t"
-							+ resultSet.getFloat(3) + "\t" + resultSet.getDate(4));
+					out.print("<br>" + resultSet.getInt(1) + "\t" + resultSet.getString(2) + "\t"+ resultSet.getFloat(3) + "\t" + resultSet.getDate(4));
 				} else
 					out.print("Record not found for the id " + id);
 
