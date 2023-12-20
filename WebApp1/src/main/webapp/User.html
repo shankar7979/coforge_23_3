@@ -26,8 +26,13 @@ form {
      function validate(){
     	 var id=document.getElementById("id").value
     	 var name=document.getElementById("name").value
+    	 var pass1=document.getElementById("pass").value
     	 if(id==''){
     		 alert("id is blank");
+    		 return false;
+    	 }
+    	 else if(pass1==''){
+    		 alert("password is blank");
     		 return false;
     	 }
     	 else if(name==''){
