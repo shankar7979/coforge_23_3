@@ -18,8 +18,8 @@ public class MyServlet1 extends HttpServlet {
 	public void init() throws ServletException {
 	System.out.println("init called"); 
 	}
-     
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+     //doGet
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 	 
 		System.out.println("service called"); 
 		PrintWriter out = response.getWriter();
@@ -30,6 +30,10 @@ public class MyServlet1 extends HttpServlet {
 		
 		out.print("<br>Id is "+id);
 		out.print("<br>name is "+name);
+		
+		String qstring=request.getQueryString();
+		
+		out.print("<br> Query String  is "+qstring);
 		
 	}
 
