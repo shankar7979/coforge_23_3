@@ -28,6 +28,7 @@ public class EmployeeOperation extends HttpServlet {
 	public void init(ServletConfig config) throws ServletException {
 		try {
 			DriverManager.registerDriver(new com.mysql.cj.jdbc.Driver());
+			 connection = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/coforge", "root", "mysql");
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
