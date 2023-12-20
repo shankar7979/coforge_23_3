@@ -17,29 +17,47 @@ import javax.servlet.http.HttpServletResponse;
 
 @WebServlet("/EmployeeOperation")
 public class EmployeeOperation extends HttpServlet {
-	
+
 	private static final long serialVersionUID = 1L;
 
 	Connection connection;
 	Statement statement;
 	ResultSet resultSet;
-	
+
 	@Override
 	public void init(ServletConfig config) throws ServletException {
 		try {
 			DriverManager.registerDriver(new com.mysql.cj.jdbc.Driver());
-			 connection = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/coforge", "root", "mysql");
+			connection = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/coforge", "root", "mysql");
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
-		
-	}	
+
+	}
+
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
+
+		PrintWriter out = response.getWriter();
 
 		String search = request.getParameter("search");
 		if (search.equals("id")) {
 			int id = Integer.parseInt(request.getParameter("id"));
+			try {
+				statement = connection.createStatement();
+				resultSet = statement.executeQuery("select * from employee where id=" + id);
+
+				if (resultSet.next()) {
+					out.print("Record found for the id " + id);
+					out.print("<br>" + resultSet.getInt(1) + "\t" + resultSet.getString(2) + "\t"
+							+ resultSet.getFloat(3) + "\t" + resultSet.getDate(4));
+				} else
+					out.print("Record not found for the id " + id);
+
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+
 		}
 
 		if (search.equals("all")) {
