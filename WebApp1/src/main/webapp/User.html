@@ -22,14 +22,30 @@ form {
 </style>
 </head>
 <body>
-
-	<form action="MyServlet1">
+  <script>
+     function validate(){
+    	 var id=document.getElementById("id").value
+    	 var name=document.getElementById("name").value
+    	 if(id==''){
+    		 alert("id is blank");
+    		 return false;
+    	 }
+    	 else if(name==''){
+    		 alert("name is blank");
+    		 return false;
+    	 }
+    	 else{
+    		 true;
+    	 }
+     }
+  </script>
+	<form action="MyServlet1" onsubmit="return validate()">
 		<div>
-			<label>Enter Id</label> <input name="id">
+			<label>Enter Id</label> <input name="id" id="id">
 		</div>
 
 		<div>
-			<label>Enter Name</label> <input name="name">
+			<label>Enter Name</label> <input name="name" id="name">
 		</div>
 		<div>
 			<input type="submit"> <input type="reset">
