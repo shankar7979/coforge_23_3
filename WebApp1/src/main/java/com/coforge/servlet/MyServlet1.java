@@ -27,9 +27,20 @@ public class MyServlet1 extends HttpServlet {
 		
 		String id = request.getParameter("id");
 		String name = request.getParameter("name");
+//		String hobby = request.getParameter("hobby");
+		String hobby[] = request.getParameterValues("hobby");
 		
 		out.print("<br>Id is "+id);
-		out.print("<br>name is "+name);
+		out.print("<br>Name is "+name);
+		out.print("<br><br>Hobbies are  ");
+
+		out.print("<ol>  ");
+		
+		for (String string : hobby) {
+			out.print("<li>"+string);
+		}
+		
+		out.print("</ol> <p> ");
 		
 		String qstring=request.getQueryString();
 		
