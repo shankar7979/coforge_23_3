@@ -13,17 +13,20 @@
 form {
 	background-color: aqua;
 }
+.style1 {
+	font-weight: bold
+}
 </style>
 </head>
 <body>
 	<form>
 	
 		<h1>North Indian Food</h1>
-		<div>
+		<div class="style1">
 		Welcome to <%=request.getAttribute("rest_name") %>
 		</div>
 		
-		<div>
+		<div class="style1">
 		Location <%=request.getAttribute("rest_location") %>
 		</div>
 		
@@ -34,6 +37,14 @@ form {
 		 Name is
 		<%=request.getParameter("name")%>
 		</div>
+		
+			<h2>Food List</h2>
+		<ol>
+			<li>puri sabji</li>
+			<li>rajma chawal</li>
+			<li>dal bahti churma</li>
+		</ol>
+		
 	</form>
 
 </body>
