@@ -11,8 +11,9 @@
 	<div>
 		<a href="Shopping.jsp">Shopping Kart</a>
 	</div>
+	
 	<div>
-		<a href="">Inventory Management</a>
+		<a href="AccountLogin.jsp">Account LoginIn</a>
 	</div>
 </body>
 </html>
