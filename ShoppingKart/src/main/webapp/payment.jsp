@@ -21,11 +21,17 @@ h1 {
 </head>
 <body>
 	<%
+	if(session.isNew()){
+	   out.print("<h2>Your Session has Expired");
+	   out.print("<br><br><br><a href='Shopping.jsp'>Login Again");
+	}
+	else{
 	Object id = session.getAttribute("id");
 	Object product1 = session.getAttribute("prd1");
 	Object product2 = session.getAttribute("prd2");
 	String product3 = request.getParameter("prd3");
 	String product4 = request.getParameter("prd4");
+	
 	%>
 	<form>
 		<h2>Products Purchased Are</h2>
@@ -40,6 +46,7 @@ h1 {
 			<li><%=product4%></li>
 		</ol>
 	</form>
+	<%} %>
 </body>
 
 

@@ -35,6 +35,8 @@ String product2= request.getParameter("prd2");
     </ol>
     
     <% 
+     session.setMaxInactiveInterval(10);
+    
      session.setAttribute("id", id);
      session.setAttribute("prd1", product1);
      session.setAttribute("prd2", product2);
