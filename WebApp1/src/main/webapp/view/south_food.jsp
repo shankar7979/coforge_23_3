@@ -17,6 +17,14 @@ background-color: wheat;
 <body>
 <form>
 <h1>South Indian Food</h1>
+	<div>
+		Welcome to <%=request.getAttribute("rest_name") %>
+		</div>
+		
+		<div>
+		Location <%=request.getAttribute("rest_location") %>
+		</div>
+		
 Id is <%=request.getParameter("id") %>
 <br>
 Name is <%=request.getParameter("name") %>
