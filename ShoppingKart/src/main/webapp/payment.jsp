@@ -20,11 +20,10 @@ h1 {
 </style>
 </head>
 <body>
-
 	<%
-	String id = request.getParameter("id");
-	String product1 = request.getParameter("prd1");
-	String product2 = request.getParameter("prd2");
+	Object id = session.getAttribute("id");
+	Object product1 = session.getAttribute("prd1");
+	Object product2 = session.getAttribute("prd2");
 	String product3 = request.getParameter("prd3");
 	String product4 = request.getParameter("prd4");
 	%>

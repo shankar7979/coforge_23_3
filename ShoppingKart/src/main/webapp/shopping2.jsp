@@ -33,6 +33,12 @@ String product2= request.getParameter("prd2");
     <li><%=product1 %></li>
     <li><%=product2 %></li>
     </ol>
+    
+    <% 
+     session.setAttribute("id", id);
+     session.setAttribute("prd1", product1);
+     session.setAttribute("prd2", product2);
+    %>
 		<h1>Shopping page</h1>
 		<div>
 			<label>Product3 </label> <input name="prd3">
