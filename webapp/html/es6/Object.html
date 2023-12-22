@@ -5,10 +5,9 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Page Title</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
     <script>
      const employee={
-         id:'10001',
+         id:10001,
          name:'suresh kumar',
          address:{
               'city':'new delhi delhi',
@@ -16,9 +15,9 @@
               'state':'up',
               'country':'india'
          },
-         'salary':20000,
-         'dob':'10-jan-1997',
-         'pf':0.03,
+         salary:20000,
+         dob:'10-jan-1997',
+         pf:0.03,
          netSalary(){
           return employee.salary-employee.salary*employee.pf;
          }
@@ -30,8 +29,7 @@
      console.info('\tpf '+employee.pf)
      console.info('\tnet salary '+employee.netSalary())
      console.info('\tdob '+employee.dob)
-
-
+      
     </script>
 </head>
 <body>
