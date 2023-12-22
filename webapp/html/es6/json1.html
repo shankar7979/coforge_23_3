@@ -6,7 +6,7 @@
     <title>Page Title</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
-    <script src='main.js'>
+    <script>
  const student=[  
    {  
       name:'arun',
@@ -87,8 +87,23 @@
    }
 ]
 
+document.write('<h2>student data</h2>')
+
+document.write(JSON.stringify(student[0]));
+document.write("<p>"+JSON.stringify(student[1]));
+
+    document.write("<br>name "+student[0].name);
+    document.write("<br>gender "+student[0].gender);
+    document.write("<br>physics "+student[0].physics);
+    document.write("<br>maths "+student[0].maths);
+    document.write("<br>english "+student[0].english);
+
 
     </script>
+
+ 
+
+
 </head>
 <body>
     
