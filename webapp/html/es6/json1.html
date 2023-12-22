@@ -98,6 +98,13 @@ document.write("<p>"+JSON.stringify(student[1]));
     document.write("<br>maths "+student[0].maths);
     document.write("<br>english "+student[0].english);
 
+    document.write("<p><p><br> using for of loop <p> ")
+
+    for (const st of student) {
+        document.write("<br>"+st.name+"\t"+st.gender+"\t"+st.maths+"\t"+st.english+"\t"+st.physics)
+    }
+
+    
 
     </script>
 
