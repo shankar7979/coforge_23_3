@@ -4,7 +4,6 @@ var connection=mysql.createConnection({
      'user':'root',
      'password':'mysql',
      database:'db1'
-
 });
 connection.connect((err)=>{
     if(err)
@@ -13,6 +12,9 @@ connection.connect((err)=>{
         if(err)
          throw err;
         console.log(result);
+        result.forEach(element => {
+            console.log(element);
+        });
     });
 console.log('connected ')
 })
