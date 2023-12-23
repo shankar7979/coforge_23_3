@@ -7,7 +7,7 @@ const employee=[
    },
    {
     'id':100002,
-    'name':'paranavc kumar',
+    'name':'paranav kumar',
     'salary':20000,
     'dob':'11-mar-1997'
    },
@@ -42,3 +42,4 @@ const employee=[
     'dob':'01-feb-1993'
    }
 ]
+module.exports=employee;
