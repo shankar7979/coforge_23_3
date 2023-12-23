@@ -19,7 +19,7 @@ public class EmployeeMain {
 		
 		Transaction transaction = session.getTransaction();
 		
-		Employee employee=new Employee();configuration.configure();
+		Employee employee=new Employee();
 		employee.setId(10002);
 		employee.setName("narayn tiwari ");;
 		employee.setSalary(25000.00f);
