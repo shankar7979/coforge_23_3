@@ -77,5 +77,36 @@ app.post("/all/", (req, resp) => {
         return resp.status(201).json(new_employee);
     }
 })
+// update -- put method
+app.put("/all/", (req, resp) => {
+
+    if (!req.body.id) {
+        return resp.status(404).send('add the id ')
+    }
+    else if (!req.body.name) {
+        return resp.status(404).send('add the name ')
+    }
+    else if (!req.body.salary) {
+        return resp.status(404).send('add the  salary')
+    }
+    else if (!req.body.dob) {
+        return resp.status(404).send('add the dob ')
+    }
+    var id1 = req.body.id;
+    var emp1 = employee.find((a) => {
+        return a.id === parseInt(id1)
+    })
+    if (!emp1) {
+        resp.status(404).send('employee not present with given id')
+    }
+    else {
+        var index=employee.indexOf(emp1)
+        emp1.name = req.body.name
+        emp1.salary = req.body.salary
+        emp1.dob = req.body.dob
+        employee[index]=emp1;
+     return resp.status(201).send(emp1);
+    }
+})
 
 app.listen(1000);
