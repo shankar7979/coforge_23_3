@@ -5,7 +5,6 @@ app.get("/",(req,resp)=>{
     resp.writeHead(200,{'Content-Type':'text/html'});
     resp.write('<h1>hello world</h1>');
     resp.write('hello world');
-   
     resp.end();
 });
 app.get("/book",(req,resp)=>{
@@ -23,6 +22,10 @@ var book={
     "author":'a kumar',
     "cost":456
 };
-app.listen(2000);
-console.log('listening on 2000 post')
-
+var server=app.listen(2000,()=>{
+    var address=server.address().address; 
+    var port=server.address().port; 
+    console.log('address is '+address)
+     console.log('port is '+port)
+     console.log('now port is %s',port)
+});
