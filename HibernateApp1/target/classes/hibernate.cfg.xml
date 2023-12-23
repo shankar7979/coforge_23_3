@@ -9,12 +9,12 @@
 		<property name="hibernate.connection.username">root</property>
 		<property name="hibernate.connection.password">mysql</property>
 		<property name="hibernate.connection.pool_size">1</property>
-		<property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+		<property name="dialect">org.hibernate.dialect.MySQL5Dialect</property>
 		<property name="show_sql">true</property>
-		<property name="hbm2ddl.auto">create</property>
+		<property name="hibernate.hbm2ddl.auto">create</property>
 		<!-- create / create-drop / update / validate -->
 
-     	<mapping class="" />
+     	<mapping class="com.coforge.model.Employee" />
 		
 		
 	</session-factory>
