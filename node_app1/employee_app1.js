@@ -30,7 +30,7 @@ app.get("/all/:eid", (req, resp) => {
     return resp.status(302).send(e);
 });
 app.delete("/all/:eid", (req, resp) => {
-    console.log('delete operation using id ')
+    console.log('crud delete operation using id ')
     if (!req.params.eid || isNaN(req.params.eid)) {
         return resp.status(404).send('invalid id <br>id is not a number');
     }
@@ -41,12 +41,41 @@ app.delete("/all/:eid", (req, resp) => {
         return resp.status(404).send('id is not found')
         console.log('id not found ')
     }
-  if(e){
-    let  index= employee.indexOf(e);
-    employee.splice(index,1);
-    console.log('found and deleted')
-    return resp.status(202).json(employee);
-  }
+    if (e) {
+        let index = employee.indexOf(e);
+        let e1 = employee.splice(index, 1);
+        console.log('found and deleted')
+        //return resp.status(202).json(employee);  // return rest employee after deleted
+        return resp.status(202).json(e1);  // return deleted employee
+    }
+})
+//post method -- add record
+console.log('post create crud operation ')
+app.post("/all/", (req, resp) => {
+    const new_employee = {
+        id: req.body.id,
+        name: req.body.name,
+        salary: req.body.salary,
+        dob: req.body.dob
+    }
+    if (!new_employee.id) {
+        return resp.status(400).send('add the id ')
+    }
+    else if (!new_employee.name) {
+        return resp.status(400).send('add the name ')
+    }
+
+    else if (!new_employee.salary) {
+        return resp.status(400).send('add the salary ')
+    }
+
+    else if (!new_employee.dob) {
+        return resp.status(400).send('add the salary ')
+    }
+    else {
+        employee.push(new_employee);
+        return resp.status(201).json(new_employee);
+    }
 })
 
 app.listen(1000);
