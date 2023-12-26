@@ -32,6 +32,7 @@ public class CustomerMain2 {
 				customer = null;
 				customer = new Customer();
 				System.out.println("Enter name salary and dob in dd-MM-yyyy format ");
+				scanner.nextLine();
 				customer.setCustomerName(scanner.nextLine());
 				customer.setCustomerSalary(scanner.nextFloat());
 				dob = scanner.next();
@@ -46,9 +47,28 @@ public class CustomerMain2 {
 					System.out.println("customer id already present");
 				break;
 
+			case 2:
+				System.out.println("enter customer id");
+				customer=null;
+				customer=dao.searchCustomer(scanner.nextInt());
+				if(customer==null)
+					System.out.println("Record not found with id ");
+				else 
+					System.out.println("Customer Found\n"+customer);
+				break;
+			case 3:
+				System.out.println("all customer records ");
+				if(dao.getAllCustomer().size()==0)
+					System.out.println("customer list is empty");
+				else
+				dao.getAllCustomer().forEach(a->System.out.println(a));
+			break;
+			
 			default:
 				break;
 			}
+			System.out.println("continue y\\n");
+			ch=scanner.next();
 		}
 		scanner.close();
 	}

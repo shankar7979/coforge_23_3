@@ -59,4 +59,10 @@ public class Customer {
 		this.customerSalary = customerSalary;
 	}
 
+	@Override
+	public String toString() {
+		return "Customer [customerId=" + customerId + ", customerName=" + customerName + ", customerSalary="
+				+ customerSalary + ", customerDob=" + customerDob + "]";
+	}
+
 }
