@@ -43,4 +43,30 @@ public class CustomerDaoImpl implements CustomerDao {
 		return session.createQuery("from Customer").getResultList();
 	}
 
+	@Override
+	public Customer deleteCustomer(int id) {
+		Customer c1 = searchCustomer(id);
+		if (c1 != null) {
+			transaction.begin();
+			session.delete(c1);
+			transaction.commit();
+			return c1;
+		}
+		return null;
+	}
+
+	@Override
+	public Customer updateCustomer(Customer c) {
+		
+		Customer c1 = searchCustomer(c.getCustomerId());
+		if (c1 != null) {
+			transaction.begin();
+			
+			session.update(c);
+			transaction.commit();
+			return c;
+		}
+		return null;
+	}
+
 }
