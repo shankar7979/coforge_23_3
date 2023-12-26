@@ -1,18 +1,39 @@
 package com.coforge.model;
 
+import java.time.LocalDate;
+
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity
+@Table(name = "customer1")
 public class Customer {
 
 	@Id
 	@GeneratedValue
-	
+
+	@Column(name = "id")
 	private int customerId;
+
+	@Column(name = "name", length = 30, nullable = false)
 	private String customerName;
+
+	@Column(name = "salary", nullable = false)
 	private float customerSalary;
+
+	@Column(name = "dob", nullable = false)
+	private LocalDate customerDob;
+		
+	public LocalDate getCustomerDob() {
+		return customerDob;
+	}
+
+	public void setCustomerDob(LocalDate customerDob) {
+		this.customerDob = customerDob;
+	}
 
 	public int getCustomerId() {
 		return customerId;

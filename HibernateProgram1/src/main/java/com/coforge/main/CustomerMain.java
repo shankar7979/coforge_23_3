@@ -1,5 +1,6 @@
 package com.coforge.main;
 
+import java.time.LocalDate;
 import java.util.List;
 import java.util.Scanner;
 
@@ -35,7 +36,12 @@ public class CustomerMain {
 		//scanner.nextLine();
 		customer.setCustomerName(scanner.nextLine());
 		customer.setCustomerSalary(scanner.nextFloat());
+		
+		customer.setCustomerDob(LocalDate.of(1997, 10, 21));
 
+		 
+		
+		
 //		customer.setCustomerId(676776767);
 //		customer.setCustomerName("suresh kumar");
 //		customer.setCustomerSalary(35000.00f);
