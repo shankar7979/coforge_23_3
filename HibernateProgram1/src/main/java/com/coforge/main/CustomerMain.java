@@ -28,10 +28,11 @@ public class CustomerMain {
 
 		Scanner scanner = new Scanner(System.in);
 
-		System.out.println("enter id name and salary ");
+//		System.out.println("enter id name and salary ");
+		System.out.println("enter name and salary ");
 
-		customer.setCustomerId(scanner.nextInt());
-		scanner.nextLine();
+		//customer.setCustomerId(scanner.nextInt());
+		//scanner.nextLine();
 		customer.setCustomerName(scanner.nextLine());
 		customer.setCustomerSalary(scanner.nextFloat());
 
@@ -58,6 +59,8 @@ public class CustomerMain {
 	     for (Customer customer2 : resultList) {
 			System.out.println(customer2.getCustomerId()+"\t"+customer2.getCustomerName()+"\t"+customer2.getCustomerSalary());
 		}
-	     
+	    
+	     scanner.close();
+	     session.close();
 	}
 }
