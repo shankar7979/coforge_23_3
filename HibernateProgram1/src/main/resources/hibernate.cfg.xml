@@ -16,8 +16,5 @@
 		<!-- create / create-drop / update / validate -->
 
      	<mapping class="com.coforge.model.Customer" />
-		
-		
 	</session-factory>
-	
 </hibernate-configuration>
