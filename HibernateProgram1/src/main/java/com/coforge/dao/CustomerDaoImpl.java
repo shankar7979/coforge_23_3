@@ -27,9 +27,9 @@ public class CustomerDaoImpl implements CustomerDao {
 		Customer c1 = searchCustomer(c.getCustomerId());
 		if (c1 == null) {
 			transaction.begin();
-			session.save(c1);
+			session.save(c);
 			transaction.commit();
-			return c1;
+			return c;
 		}
 		return null;
 	}
