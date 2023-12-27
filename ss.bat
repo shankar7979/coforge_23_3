@@ -1,8 +1,8 @@
 
 rem cp -r C:\Users\Training\eclipse-workspace1\Test_project .
-cp -r C:\Users\Training\eclipse-workspace1\HibernateProgram2 .
+rem cp -r C:\Users\Training\eclipse-workspace1\HibernateProgram2 .
 
-cp -r C:\Users\Training\eclipse-workspace1\Test_maven_project .
+rem cp -r C:\Users\Training\eclipse-workspace1\Test_maven_project .
 
 
  git add *
