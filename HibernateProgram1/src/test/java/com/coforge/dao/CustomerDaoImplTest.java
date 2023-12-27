@@ -16,19 +16,11 @@ import org.junit.jupiter.api.Test;
 import com.coforge.model.Customer;
 
 class CustomerDaoImplTest {
-	Configuration configuration;
-	SessionFactory factory;
-	Session session;
-	Transaction transaction;
 
 	CustomerDao dao;
 
 	@BeforeEach
 	void setUp() throws Exception {
-		configuration = new Configuration().configure();
-		factory = configuration.buildSessionFactory();
-		session = factory.openSession();
-		transaction = session.getTransaction();
 		dao = new CustomerDaoImpl();
 	}
 
@@ -36,27 +28,37 @@ class CustomerDaoImplTest {
 	void tearDown() throws Exception {
 	}
 
+	Customer customer;
+
 	@Test
 	void testAddCustomer() {
-		Customer customer = new Customer();
+		customer = new Customer();
 		customer.setCustomerName("pranjal agarwal");
 		customer.setCustomerSalary(28000);
 		customer.setCustomerDob(LocalDate.of(2001, 1, 16));
 		dao.addCustomer(customer);
-		
-		assertEquals(dao.getAllCustomer().size(),1);
+
+		assertEquals(dao.getAllCustomer().size(), 1);
 		List<Customer> allCustomer = dao.getAllCustomer();
-	    Customer c=  allCustomer.get(0);
-	    
-	    assertEquals(c.getCustomerName(), "pranjal agarwal");
-	    assertEquals(c.getCustomerSalary(), 28000);
-	    assertEquals(c.getCustomerDob(), LocalDate.of(2001, 1, 16));
-	    
-	    
+		Customer c = allCustomer.get(0);
+
+		assertEquals(c.getCustomerName(), "pranjal agarwal");
+		assertEquals(c.getCustomerSalary(), 28000);
+		assertEquals(c.getCustomerDob(), LocalDate.of(2001, 1, 16));
 	}
 
 	@Test
 	void testSearchCustomer() {
+		customer=null;
+		customer = new Customer();
+		customer.setCustomerName("anand kumar");
+		customer.setCustomerSalary(48000);
+		customer.setCustomerDob(LocalDate.of(2002, 10, 16));
+		dao.addCustomer(customer);
+		
+		List<Customer> allCustomer = dao.getAllCustomer();
+		Customer customer2 = allCustomer.get(0);
+		assertEquals(dao.searchCustomer(customer2.getCustomerId()), customer);
 	}
 
 	@Test
