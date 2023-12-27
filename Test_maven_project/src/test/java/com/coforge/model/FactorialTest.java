@@ -11,5 +11,11 @@ class FactorialTest {
 		System.out.println("factorial test");
 		assertEquals(Factorial.getFactorial(5), 120);
 	}
+	//@Test
+	@para
+	void testGetFactorial1() {
+		System.out.println("factorial test");
+		assertEquals(Factorial.getFactorial(5), 120);
+	}
 
 }
