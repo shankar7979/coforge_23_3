@@ -1,8 +1,13 @@
 package com.coforge.model.one_to_one;
 
+import java.util.Set;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 
 @Entity
@@ -14,9 +19,19 @@ public class Employee {
 	private String name;
 	private float salary;
 
-	@OneToOne
+	@OneToOne(cascade = CascadeType.ALL)
+	@JoinColumn(name="address_id")
 	private Address address;
 	
+	@OneToMany(cascade = CascadeType.ALL)
+	private Set<Car> carSet;
+	
+	public Set<Car> getCarSet() {
+		return carSet;
+	}
+	public void setCarSet(Set<Car> carSet) {
+		this.carSet = carSet;
+	}
 	public Address getAddress() {
 		return address;
 	}
