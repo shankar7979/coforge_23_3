@@ -9,4 +9,10 @@ public class Factorial {
 		}
 		return f;
 	}
+	static boolean checkOdd(int p) {
+		if(p%2!=0)
+			return true;
+		return false;
+	}
+	
 }
