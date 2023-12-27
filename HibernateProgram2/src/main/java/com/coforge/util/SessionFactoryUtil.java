@@ -9,7 +9,7 @@ public class SessionFactoryUtil {
 	
 	private static SessionFactory factory;
 
-	static SessionFactory getSessionFactory() {
+	public static SessionFactory getSessionFactory() {
 		if(factory==null) {
           factory=new Configuration().configure().buildSessionFactory();			
 		}

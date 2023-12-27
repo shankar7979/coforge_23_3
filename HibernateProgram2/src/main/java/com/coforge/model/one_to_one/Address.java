@@ -8,7 +8,6 @@ import javax.persistence.Id;
 public class Address {
 	@Id
 	@GeneratedValue
-
 	private int addr_id;
 	private String addr_City;
 	private String addr_State;
