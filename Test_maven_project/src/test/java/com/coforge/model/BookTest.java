@@ -59,5 +59,9 @@ class BookTest {
 	void testGetDiscount() {
 		assertEquals(book2.getDiscount(), 0.12f);
 	}
-
+	 
+	@Test
+	void testFinalCost() {
+		assertEquals(book1.finalCost(), 1056);
+	}
 }

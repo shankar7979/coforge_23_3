@@ -91,6 +91,9 @@ public class Book {
 		this.discount = discount;
 	}
 	
+	public float finalCost() {
+	  return  getCost()-(getCost()*getDiscount());
+	}
 	
 	
 	
