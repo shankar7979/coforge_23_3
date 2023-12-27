@@ -1,5 +1,7 @@
-C:\Users\Training\eclipse-workspace1\HibernateProgram1\src\main\java\com\coforge\dao\CustomerDao.java
-C:\Users\Training\eclipse-workspace1\HibernateProgram1\src\main\java\com\coforge\dao\CustomerDaoImpl.java
-C:\Users\Training\eclipse-workspace1\HibernateProgram1\src\main\java\com\coforge\main\CustomerMain2.java
-C:\Users\Training\eclipse-workspace1\HibernateProgram1\src\main\java\com\coforge\model\Customer.java
-C:\Users\Training\eclipse-workspace1\HibernateProgram1\src\main\java\com\coforge\main\CustomerMain.java
+C:\Users\Training\eclipse-workspace1\HibernateProgram2\src\main\java\com\coforge\model\one_to_one\Address.java
+C:\Users\Training\eclipse-workspace1\HibernateProgram2\src\main\java\com\coforge\util\SessionFactoryUtil.java
+C:\Users\Training\eclipse-workspace1\HibernateProgram2\src\main\java\com\coforge\model\one_to_one\Employee.java
+C:\Users\Training\eclipse-workspace1\HibernateProgram2\src\main\java\com\coforge\main\one_to_one\One_To_One_Main.java
+C:\Users\Training\eclipse-workspace1\HibernateProgram2\src\main\java\com\coforge\model\singleton\UserMain.java
+C:\Users\Training\eclipse-workspace1\HibernateProgram2\src\main\java\com\coforge\model\one_to_one\Car.java
+C:\Users\Training\eclipse-workspace1\HibernateProgram2\src\main\java\com\coforge\model\singleton\User.java
