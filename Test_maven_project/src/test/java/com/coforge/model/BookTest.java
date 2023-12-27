@@ -23,28 +23,41 @@ class BookTest {
 
 	@Test
 	void bookTest() {
-		System.out.println("book test");
+		System.out.println("book test 1");
 		assertEquals(book1, book2);
 	}
 
 	@Test
-	void testSetIsbn() {
+	void bookTest1() {
+		System.out.println("book test 2");
+		assertNotNull(book1);
+		assertNotNull(book2, "book2 is null");
+
 	}
 
 	@Test
-	void testSetName() {
+	void testGetIsbn() {
+		assertEquals(book1.getIsbn(), 56565);
 	}
 
 	@Test
-	void testSetCost() {
+	void testGetName() {
+		assertEquals(book2.getName(), "java in action");
 	}
 
 	@Test
-	void testSetType() {
+	void testGetCost() {
+		assertEquals(book2.getCost(), 1200);
 	}
 
 	@Test
-	void testSetDiscount() {
+	void testGetType() {
+		assertEquals(book2.getType(), "computer");
+	}
+
+	@Test
+	void testGetDiscount() {
+		assertEquals(book2.getDiscount(), 0.12f);
 	}
 
 }
