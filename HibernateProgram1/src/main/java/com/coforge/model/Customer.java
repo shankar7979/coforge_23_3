@@ -6,7 +6,11 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.NamedQueries;
+import javax.persistence.NamedQuery;
 import javax.persistence.Table;
+
+@NamedQueries({ @NamedQuery(name = "all", query = "from Customer") })
 
 @Entity
 @Table(name = "customer1")
@@ -26,7 +30,7 @@ public class Customer {
 
 	@Column(name = "dob", nullable = false)
 	private LocalDate customerDob;
-		
+
 	public LocalDate getCustomerDob() {
 		return customerDob;
 	}

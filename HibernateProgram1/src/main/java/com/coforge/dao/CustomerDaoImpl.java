@@ -2,13 +2,15 @@ package com.coforge.dao;
 
 import java.util.List;
 
+import javax.persistence.NamedQuery;
+
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
 
 import com.coforge.model.Customer;
-
+ 
 public class CustomerDaoImpl implements CustomerDao {
 
 	Configuration configuration;
@@ -40,7 +42,9 @@ public class CustomerDaoImpl implements CustomerDao {
 	}
 
 	public List<Customer> getAllCustomer() {
-		return session.createQuery("from Customer").getResultList();
+		 return session.createNamedQuery("all").getResultList();
+		
+		 //return session.createQuery("from Customer").getResultList();
 	}
 
 	@Override
