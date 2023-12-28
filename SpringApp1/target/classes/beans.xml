@@ -8,7 +8,7 @@
 		init-method="start" destroy-method="destroy">
 	</bean>
 
-	<bean class="com.coforge.model.Employee" id="emp1">
+	<bean class="com.coforge.model.Employee" id="emp1" init-method="init">
 		<property name="empId" value="6767766"></property>
 		<property name="empName" value="amit kumar"></property>
 		<property name="empSalary" value="90000"></property>
