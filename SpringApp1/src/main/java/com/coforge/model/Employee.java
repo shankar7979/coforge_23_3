@@ -5,8 +5,16 @@ public class Employee {
 	private long  empId;
 	private  String  empName;
 	private float  empSalary;
+	private Address address;
 	
-	
+	public Address getAddress() {
+		return address;
+	}
+
+	public void setAddress(Address address) {
+		this.address = address;
+	}
+
 	void  init() {
 		this.empId=877878;
 		this.empName="suresh kumar";

@@ -8,10 +8,18 @@
 		init-method="start" destroy-method="destroy">
 	</bean>
 
-	<bean class="com.coforge.model.Employee" id="emp1" init-method="init" scope="prototype">
+	<bean class="com.coforge.model.Employee" id="emp1"
+		init-method="init" scope="prototype">
 		<property name="empId" value="6767766"></property>
 		<property name="empName" value="amit kumar"></property>
 		<property name="empSalary" value="90000"></property>
+	</bean>
+
+
+	<bean class="com.coforge.model.Address" id="addr">
+		<property name="addrId" value="6756776"></property>
+		<property name="city" value="greater noida"></property>
+		<property name="state" value="uttar pardesh"></property>
 	</bean>
 
 
