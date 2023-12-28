@@ -4,7 +4,7 @@ public class Hello {
     int c;
 	void start() {
 		c=1;
-		System.out.println("init called ");
+		System.out.println("init called for Hello1 ");
 	}
 	
 	public void display() {
