@@ -4,7 +4,7 @@
     xsi:schemaLocation="
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="hello1" class="com.coforge.model.Hello">
+    <bean id="hello1" class="com.coforge.model.Hello" init-method="">
     </bean>
 
 </beans>
