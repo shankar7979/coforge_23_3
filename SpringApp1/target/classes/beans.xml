@@ -1,11 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="hello1" class="com.coforge.model.Hello" init-method="start"
-    destroy-method="destroy">
-    </bean>
+	<bean id="hello1" class="com.coforge.model.Hello"
+		init-method="start" destroy-method="destroy">
+	</bean>
+
+	<bean class="com.coforge.model.Employee" id="emp1">
+		<property name="empId" value="6767766"></property>
+		<property name="empName" value="amit kumar"></property>
+		<property name="empSalary" value="90000"></property>
+	</bean>
+
 
 </beans>

@@ -18,8 +18,5 @@ public class HelloMain {
 		hello.display();
 		
 		beanFactory.close();
-		
-		
-
 	}
 }
