@@ -6,6 +6,7 @@ public class Employee {
 	private  String  empName;
 	private float  empSalary;
 	
+	
 	void  init() {
 		this.empId=877878;
 		this.empName="suresh kumar";
