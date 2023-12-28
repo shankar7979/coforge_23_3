@@ -17,8 +17,7 @@ public class User {
 	private int id;
 	private String name;
 	private Address address1;
-	private Address address2;
-
+ 
 	public static void main(String[] args) {
 		 
 		User user=new User();
