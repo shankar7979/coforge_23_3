@@ -13,6 +13,7 @@
 		<property name="empId" value="6767766"></property>
 		<property name="empName" value="amit kumar"></property>
 		<property name="empSalary" value="90000"></property>
+		<property name="address" ref="addr"></property>
 	</bean>
 
 
@@ -21,6 +22,10 @@
 		<property name="city" value="greater noida"></property>
 		<property name="state" value="uttar pardesh"></property>
 	</bean>
-
-
+	
+	<bean id="book1" class="com.coforge.model.Book">
+	  <constructor-arg name="isbn" value="67776"></constructor-arg>
+	  <constructor-arg name="bname" value="spring recipee"></constructor-arg>
+	  <constructor-arg name="author" value="s kumar"></constructor-arg>
+	</bean>
 </beans>

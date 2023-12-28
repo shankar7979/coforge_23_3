@@ -23,11 +23,12 @@ public class EmployeeMain {
 		System.out.println("\temployee id  "+emp1.getEmpId());
 		System.out.println("\temployee name  "+emp1.getEmpName());
 		System.out.println("\temployee salary  "+emp1.getEmpSalary());
+		System.out.println("\n\tAddress "+emp1.getAddress());
 	
 		System.out.println("\nemployee2 data ");
 		System.out.println("\temployee id  "+emp2.getEmpId());
 		System.out.println("\temployee name  "+emp2.getEmpName());
 		System.out.println("\temployee salary  "+emp2.getEmpSalary());
-		
+		System.out.println("\n\tAddress "+emp2.getAddress());
 	}
 }
