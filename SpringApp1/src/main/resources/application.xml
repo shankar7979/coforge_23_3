@@ -31,29 +31,11 @@
 		</property>
 		<property name="car">
 			<map>
-				<entry>
-					<key>
-						10001
-					</key>
-					<value>Maruti Swift</value>
-				</entry>
-				<entry>
-					<key>
-						10002
-					</key>
-					<value>Tata Jaguar</value>
-				</entry>
-				<entry>
-					<key>
-						10001
-					</key>
-					<value>Mahindra Bolero</value>
-				</entry>
-				<entry>
-					<key>
-						10003
-					</key>
-					<value>Celario</value>
+				<entry key="10001" value="Maruti Swift" />
+				<entry key="10002" value="Tata Jaguar" />
+				<entry key="10001" value="Mahindra Bolero" />
+
+				<entry key="10003" value="Celario">
 				</entry>
 			</map>
 		</property>
