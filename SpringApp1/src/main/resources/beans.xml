@@ -23,9 +23,12 @@
 		<property name="state" value="uttar pardesh"></property>
 	</bean>
 	
-	<bean id="book1" class="com.coforge.model.Book">
+<!-- 	<bean id="book1" class="com.coforge.model.Book"> -->
+	<!--    if no id the spring creates id with small case like book -->
+	<bean  class="com.coforge.model.Book">
 	  <constructor-arg name="isbn" value="67776"></constructor-arg>
 	  <constructor-arg name="bname" value="spring recipee"></constructor-arg>
 	  <constructor-arg name="author" value="s kumar"></constructor-arg>
 	</bean>
+	
 </beans>
