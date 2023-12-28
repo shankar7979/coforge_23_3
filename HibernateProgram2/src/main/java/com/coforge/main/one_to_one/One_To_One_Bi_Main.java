@@ -26,18 +26,24 @@ public class One_To_One_Bi_Main {
 
 		User user = new User();
 		user.setUserName("suresh kumar");
-		user.setUserDob(LocalDate.of(11, 12, 1990));
+		user.setUserDob(LocalDate.of(1990,11,12));
 
 		Bike bike = new Bike();
 
 		bike.setBikeModel("honda shine");
 		bike.setBikeCost(90000);
-
+         // uni direction  user --> bike
 		user.setBike(bike);
 
+		// bi direction  bike --> user
+		bike.setUser(user);
+		
 		transaction.begin();
-		session.save(user);
+		//session.save(user);
+		session.save(bike);
 		transaction.commit();
+		
+		
 
 	}
 }
