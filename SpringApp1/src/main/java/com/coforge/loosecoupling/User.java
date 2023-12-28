@@ -6,9 +6,7 @@ import lombok.Setter;
 import lombok.ToString;
 
 interface Address {
-
 	void addressDetail();
-
 }
 
 @Setter
@@ -18,23 +16,26 @@ public class User {
 
 	private int id;
 	private String name;
-	private Address address;
+	private Address address1;
+	private Address address2;
 
 	public static void main(String[] args) {
 		 
 		User user=new User();
 		user.setId(676776);
 		user.setName("sudhir kumar");
-		user.setAddress(new HomeAddress());
-		//user.setAddress(new OfficeAddress());
 		
-		System.out.println(user);
+		user.address1=new HomeAddress();
+		System.out.println(user.getId()+"\t"+user.getName());
+		user.address1.addressDetail();
+		
+		user.address1=new OfficeAddress();
+		System.out.println(user.getId()+"\t"+user.getName());
+		user.address1.addressDetail();
 	}
 }
 
-@Setter
-@Getter
-@ToString
+ 
 class HomeAddress implements Address {
 
 	@Override
@@ -42,14 +43,11 @@ class HomeAddress implements Address {
 		System.out.println(" office address");
 	}
 }
-
-@Setter
-@Getter
-@ToString
+ 
 class OfficeAddress implements Address {
 	
 	@Override
 	public void addressDetail() {
-		System.out.println(" office address");
+		System.out.println("home  address");
 	}
 }
