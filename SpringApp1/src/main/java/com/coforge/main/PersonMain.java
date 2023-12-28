@@ -12,7 +12,6 @@ public class PersonMain {
 		 
 	  ApplicationContext beanFactory	= new       
 	    		    ClassPathXmlApplicationContext("application.xml");
-
 		 
 	  Person bean = beanFactory.getBean(Person.class);
 	  System.out.println(bean);
@@ -30,8 +29,5 @@ public class PersonMain {
 	  
 	  System.out.println("\ncar   \n");
 	  bean.getCar().entrySet().forEach(a->System.out.println(a.getKey()+"\t"+a.getValue()));
-	  
-	  
-	  
 	}
 }
