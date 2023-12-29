@@ -5,6 +5,7 @@ import org.springframework.context.annotation.Configuration;
 
 import com.coforge.dao.ProductDao;
 import com.coforge.model.User;
+import com.coforge.service.ProductService;
 
 @Configuration
 public class SpringConfig {
@@ -22,6 +23,11 @@ public class SpringConfig {
 	@Bean
 	public ProductDao  getProductDao() {
 		return new ProductDao();
+	}
+	
+	@Bean
+	public ProductService  getProductService() {
+		return new ProductService();
 	}
 	
 	
