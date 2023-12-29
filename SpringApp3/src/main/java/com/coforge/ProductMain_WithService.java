@@ -1,5 +1,8 @@
 package com.coforge;
 
+import java.util.Map;
+import java.util.Map.Entry;
+
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
@@ -25,7 +28,18 @@ public class ProductMain_WithService {
 			System.out.println("add operation \n");
 			service.addProduct(p[0]);
 			service.addProduct(p[1]);
+			service.addProduct(p[1]);
 			service.addProduct(p[2]);
+		}
+		catch (ProductException e) {
+			System.err.println(e.getMessage());
+		}
+		try {
+			Map<Long, Product> allProduct = service.getAllProduct();
+			
+			System.out.println("\nget all  operation \n");
+			for(Entry<Long, Product> p1:allProduct.entrySet())
+				System.out.println(p1.getValue());
 			
 			
 		} catch (ProductException e) {
