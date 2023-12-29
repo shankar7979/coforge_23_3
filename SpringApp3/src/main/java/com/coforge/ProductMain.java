@@ -13,8 +13,10 @@ import com.coforge.model.Product;
 public class ProductMain {
 
 	public static void main(String[] args) {
+//		ApplicationContext ctx=new AnnotationConfigApplicationContext
+//				 (ProductDao.class);
 		ApplicationContext ctx=new AnnotationConfigApplicationContext
-				 (ProductDao.class);
+				(SpringConfig.class);
 		
 		ProductDao dao = ctx.getBean(ProductDao.class);
 		Product p[]=new Product[3];

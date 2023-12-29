@@ -3,6 +3,7 @@ package com.coforge.cofig;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
+import com.coforge.dao.ProductDao;
 import com.coforge.model.User;
 
 @Configuration
@@ -17,4 +18,12 @@ public class SpringConfig {
 		user.setUserSalary(34000);
 		return user;
 	}
+	
+	@Bean
+	public ProductDao  getProductDao() {
+		return new ProductDao();
+	}
+	
+	
+	
 }

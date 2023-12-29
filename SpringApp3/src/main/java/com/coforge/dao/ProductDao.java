@@ -3,16 +3,20 @@ package com.coforge.dao;
 import java.util.HashMap;
 import java.util.Map;
 import javax.annotation.Resource;
+
+import org.springframework.stereotype.Repository;
+
 import com.coforge.model.Product;
 import lombok.Data;
 
-@Resource
+//@Resource
+@Repository
 @Data
 public class ProductDao {
 
 	Map<Long, Product> productMap;
 
-	ProductDao() {
+	public ProductDao() {
 		productMap = new HashMap<>();
 	}
 
