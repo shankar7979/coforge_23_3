@@ -3,12 +3,15 @@ package com.coforge.model;
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 import lombok.Data;
 
 @Data
-@Component
+//@Component
+@Component(value = "lawyer1")
+//@Scope(value = "prototype")
 public class Lawyer {
 
 	private int id;
