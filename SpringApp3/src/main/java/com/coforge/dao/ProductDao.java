@@ -23,8 +23,22 @@ public class ProductDao {
 	public Product addProduct(Product p) {
 		return productMap.put(p.getId(), p);
 	}
-	public Map<Long,Product> getAllProduct() {
-		return productMap;
+
+	public Product searchProduct(Product p) {
+		if (productMap.containsKey(p.getId())) {
+			return productMap.get(p.getId());
+		}
+		return null;
+	}
+	
+	public Product removeProduct(Product p) {
+		if (productMap.containsKey(p.getId())) {
+			return productMap.remove(p.getId());
+		}
+		return null;
 	}
 
+	public Map<Long, Product> getAllProduct() {
+		return productMap;
+	}
 }
