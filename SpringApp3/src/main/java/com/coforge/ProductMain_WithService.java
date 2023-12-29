@@ -15,7 +15,8 @@ import com.coforge.service.ProductService;
 public class ProductMain_WithService {
 
 	public static void main(String[] args) {
-		ApplicationContext ctx = new AnnotationConfigApplicationContext(SpringConfig.class);
+		ApplicationContext ctx = new AnnotationConfigApplicationContext
+				(SpringConfig.class);
 
 		ProductService service = ctx.getBean(ProductService.class);
 		Product p[] = new Product[3];
@@ -40,9 +41,15 @@ public class ProductMain_WithService {
 			System.out.println("\nget all  operation \n");
 			for(Entry<Long, Product> p1:allProduct.entrySet())
 				System.out.println(p1.getValue());
-			
-			
 		} catch (ProductException e) {
+			System.err.println(e.getMessage());
+		}
+		try {
+			System.out.println("\nsearch  operation \n");
+			Product searchProduct = service.searchProduct(1000198);
+				System.out.println("product found "+searchProduct);
+		}
+		catch (ProductException e) {
 			System.err.println(e.getMessage());
 		}
 	}
