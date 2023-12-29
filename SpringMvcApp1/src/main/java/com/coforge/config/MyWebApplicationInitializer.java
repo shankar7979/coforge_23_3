@@ -1,6 +1,6 @@
 package com.coforge.config;
 
- import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
+import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
 public class MyWebApplicationInitializer extends
 	AbstractAnnotationConfigDispatcherServletInitializer{
