@@ -9,8 +9,7 @@ import com.coforge.model.Lawyer;
 public class LawyerMain2 {
 
 	public static void main(String[] args) {
-
-ApplicationContext applicationContext
+    ApplicationContext applicationContext
 		 = new ClassPathXmlApplicationContext("beans.xml");
 
 		Lawyer bean1 = applicationContext.getBean("lawyer1", Lawyer.class);
