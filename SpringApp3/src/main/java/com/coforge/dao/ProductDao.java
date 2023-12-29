@@ -24,16 +24,16 @@ public class ProductDao {
 		return productMap.put(p.getId(), p);
 	}
 
-	public Product searchProduct(Product p) {
-		if (productMap.containsKey(p.getId())) {
-			return productMap.get(p.getId());
+	public Product searchProduct(long id) {
+		if (productMap.containsKey(id)) {
+			return productMap.get(id);
 		}
 		return null;
 	}
 	
-	public Product removeProduct(Product p) {
-		if (productMap.containsKey(p.getId())) {
-			return productMap.remove(p.getId());
+	public Product removeProduct(long id) {
+		if (productMap.containsKey(id)) {
+			return productMap.remove(id);
 		}
 		return null;
 	}
