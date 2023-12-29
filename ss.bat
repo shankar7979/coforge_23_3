@@ -1,5 +1,5 @@
 
- cp -r C:\Users\Training\eclipse-workspace1\SpringApp3 .
+ cp -r C:\Users\Training\eclipse-workspace1\SpringMvcApp1 .
 rem cp -r C:\Users\Training\eclipse-workspace1\HibernateProgram2 .
 
 rem cp -r C:\Users\Training\eclipse-workspace1\Test_maven_project .
