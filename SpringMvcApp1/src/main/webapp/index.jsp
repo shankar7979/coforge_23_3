@@ -9,5 +9,8 @@
 <body>
 
 <h1>Hello world</h1>
+
+<a href="user/hello">User Form </a>
+
 </body>
 </html>
