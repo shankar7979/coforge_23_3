@@ -2,6 +2,7 @@ package com.coforge.dao;
 
 import java.util.List;
 
+import org.springframework.dao.DuplicateKeyException;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
@@ -21,7 +22,7 @@ public class EmployeeDaoImpl implements EmployeeDao {
 	}
 
 	@Override
-	public Employee saveEmployee(Employee employee) {
+	public Employee saveEmployee(Employee employee) throws DuplicateKeyException {
 		int r = template.update("insert into employee values(" + employee.getId() + ",'" + employee.getName() + "',"
 				+ employee.getSalary() + ")");
 		if (r == 1)

@@ -17,17 +17,19 @@ public class EmployeeMain {
 		EmployeeDao dao = context.getBean(EmployeeDaoImpl.class);
 
 		Employee employee = new Employee();
-		employee.setId(90001);
+		employee.setId(90002);
 		employee.setName("suman sharma");
 		employee.setSalary(34000);
 
-		employee.setId(90001);
-
+		try {
 		Employee emp1 = dao.saveEmployee(employee);
 		if (emp1 != null)
 			System.out.println("Record added " + emp1);
 		else
 			System.err.println("some problem");
-
+		}
+		catch (Exception e) {
+			System.err.println(e.getMessage());
+		}
 	}
 }
