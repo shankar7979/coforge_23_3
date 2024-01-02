@@ -23,7 +23,20 @@ public class BookMain {
 		Book addBook = dao.addBook(book);
 		if(addBook!=null)
 			System.out.println("Book added "+addBook);
-		
-	
+		else
+			System.out.println("Book already present ");
+			
+
+		System.out.println("get all record");
+	    dao.getAllBook().forEach(a->System.out.println(a));
+	    
+	    System.out.println("search record");
+	    
+	    Book searchBook = dao.searchBook(1);
+	 
+	    if(searchBook!=null)
+	    	System.out.println("found "+searchBook);
+	    else
+	    	System.out.println("not found ");
 	}
 }

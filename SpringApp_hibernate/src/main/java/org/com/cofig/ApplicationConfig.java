@@ -1,6 +1,6 @@
 package org.com.cofig;
 
-import java.awt.print.Book;
+import org.com.model.Book;
 import java.util.Properties;
 
 import org.com.dao.BookDaoImpl;
@@ -35,7 +35,7 @@ public class ApplicationConfig {
 		properties.setProperty(AvailableSettings.PASS, "mysql");
 		properties.setProperty(AvailableSettings.DIALECT, "org.hibernate.dialect.MySQL5Dialect");
 		properties.setProperty(AvailableSettings.SHOW_SQL, "true");
-		properties.setProperty(AvailableSettings.HBM2DDL_AUTO, "create");
+//		properties.setProperty(AvailableSettings.HBM2DDL_AUTO, "create");
 		properties.setProperty(AvailableSettings.DRIVER, "com.mysql.jdbc.Driver");
 		return properties;
 	}
