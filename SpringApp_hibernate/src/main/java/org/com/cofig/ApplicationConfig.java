@@ -1,7 +1,10 @@
 package org.com.cofig;
 
+import java.awt.print.Book;
 import java.util.Properties;
 
+import org.com.dao.BookDaoImpl;
+import org.hibernate.SessionFactory;
 import org.hibernate.cfg.AvailableSettings;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -15,8 +18,13 @@ public class ApplicationConfig {
 		LocalSessionFactoryBean factoryBean = new LocalSessionFactoryBean();
 
 		factoryBean.setHibernateProperties(getHibernateProperties());
-		factoryBean.setAnnotatedClasses(null);
+		factoryBean.setAnnotatedClasses(Book.class);
 		return factoryBean;
+	}
+
+	@Bean
+	public BookDaoImpl getBookDao(SessionFactory factory) {
+		return new BookDaoImpl(factory);
 	}
 
 	@Bean
