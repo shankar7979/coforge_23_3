@@ -21,15 +21,20 @@ public class EmployeeMain {
 		employee.setName("suman sharma");
 		employee.setSalary(34000);
 
-		try {
-		Employee emp1 = dao.saveEmployee(employee);
-		if (emp1 != null)
-			System.out.println("Record added " + emp1);
-		else
-			System.err.println("some problem");
-		}
-		catch (Exception e) {
-			System.err.println(e.getMessage());
-		}
+//		try {
+//		Employee emp1 = dao.saveEmployee(employee);
+//		if (emp1 != null)
+//			System.out.println("Record added " + emp1);
+//		else
+//			System.err.println("some problem");
+//		}
+//		catch (Exception e) {
+//			System.err.println(e.getMessage());
+//		}
+		
+		System.out.println("get all employee list");
+		dao.getAllEmployee().forEach(a->System.out.println(a));
+		
+		
 	}
 }

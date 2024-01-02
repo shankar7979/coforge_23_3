@@ -1,6 +1,8 @@
 package com.coforge.dao;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.dao.DuplicateKeyException;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -15,10 +17,22 @@ import lombok.Data;
 public class EmployeeDaoImpl implements EmployeeDao {
 
 	JdbcTemplate template;
-
+Employee employee;
 	@Override
 	public List<Employee> getAllEmployee() {
-		return null;
+		List<Map<String, Object>> queryForList = template.queryForList("select * from employee");
+		
+		List<Employee> list=new ArrayList<>();
+		
+		for (Map<String, Object> map : queryForList) {
+			employee=null;
+			employee=new Employee();
+			employee.setId(Integer.parseInt(map.get("id").toString()));
+			employee.setName(map.get("name").toString());
+			employee.setSalary(Float.parseFloat(map.get("salary").toString()));
+			list.add(employee);
+		}
+		return list;
 	}
 
 	@Override
