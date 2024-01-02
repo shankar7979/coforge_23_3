@@ -22,7 +22,7 @@ public class EmployeeDaoImpl implements EmployeeDao {
 
 	@Override
 	public Employee saveEmployee(Employee employee) {
-		int r = template.update("insert into employee values(" + employee.getId() + "," + employee.getName() + ","
+		int r = template.update("insert into employee values(" + employee.getId() + ",'" + employee.getName() + "',"
 				+ employee.getSalary() + ")");
 		if (r == 1)
 			return employee;
