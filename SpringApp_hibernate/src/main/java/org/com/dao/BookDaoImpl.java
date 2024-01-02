@@ -21,11 +21,11 @@ public class BookDaoImpl implements BookDao {
 	public BookDaoImpl(SessionFactory factory) {
 		this.factory = factory;
 		session = factory.openSession();
+		transaction=session.getTransaction();
 	}
 
 	@Override
 	public Book addBook(Book b) {
-
 		transaction.begin();
 		session.save(b);
 		transaction.commit();
