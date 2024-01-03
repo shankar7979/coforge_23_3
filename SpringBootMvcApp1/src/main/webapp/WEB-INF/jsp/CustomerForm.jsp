@@ -5,10 +5,39 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
+<style type="text/css">
+form {
+	margin-left: 350px;
+	margin-top: 100px;
+	background-color: lightyellow;
+	padding: 20px;
+	border: solid;
+	width: 30%;
+}
+
+label {
+	width: 110pt;
+	float: left;
+	margin-top: 5px;
+}
+
+input {
+	margin-top: 5px;
+	width: 110pt;
+}
+span{
+	color:red;
+}
+button {
+	margin-top: 2px;
+	width: 110pt;
+}
+
+</style>
 </head>
 <body>
-	<h1>Customer Form</h1>
 	<form>
+	<h1>Customer Form</h1>
 		<div>
 			<label>Enter Id</label> <input name="id">
 		</div>
