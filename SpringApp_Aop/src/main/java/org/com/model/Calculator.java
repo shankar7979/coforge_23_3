@@ -1,6 +1,7 @@
 package org.com.model;
 
-
+import org.springframework.stereotype.Component;
+@Component
 public class Calculator {
 
 	public int addition(int a, int b) {
