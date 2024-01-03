@@ -8,5 +8,6 @@
 </head>
 <body>
 <h1>Welcome file </h1>
+<a href="cst/cstform">Customer form</a>
 </body>
 </html>
