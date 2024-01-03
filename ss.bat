@@ -1,5 +1,5 @@
 
- cp -r C:\Users\Training\eclipse-workspace1\SpringApp_jdbc .
+ cp -r C:\Users\Training\eclipse-workspace1\SpringApp_Aop .
  cp -r C:\Users\Training\eclipse-workspace1\SpringMvcWebApp1 .
 
   cp -r C:\Users\Training\eclipse-workspace1\SpringApp_hibernate .
