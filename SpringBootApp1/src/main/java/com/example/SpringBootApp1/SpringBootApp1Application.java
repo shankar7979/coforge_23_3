@@ -18,7 +18,8 @@ public class SpringBootApp1Application {
 
 	public static void main(String[] args) {
 //		SpringApplication.run(SpringBootApp1Application.class, args);
-		ConfigurableApplicationContext context = SpringApplication.run(SpringBootApp1Application.class, args);
+		ConfigurableApplicationContext context = 
+				SpringApplication.run(SpringBootApp1Application.class, args);
 		
 		Employee employee = context.getBean(Employee.class);
 		
