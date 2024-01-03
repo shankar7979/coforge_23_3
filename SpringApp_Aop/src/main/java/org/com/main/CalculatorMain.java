@@ -12,6 +12,7 @@ public class CalculatorMain {
 		ApplicationContext ctx=new AnnotationConfigApplicationContext
 				(AspectConfig.class);
 		
+		try {
 		Calculator calculator = ctx.getBean(Calculator.class);
 		
 		calculator.addition(11, 22);
@@ -19,7 +20,10 @@ public class CalculatorMain {
 		calculator.division(11, 3);
 		
 		calculator.division(11, 0);
-		
+		}
+		catch (Exception e) {
+			System.err.println(e.getMessage());
+		}
 		
 	}
 }

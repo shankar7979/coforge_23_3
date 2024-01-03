@@ -32,7 +32,7 @@ public class CalculatorAspect {
 	public void afterDivision(JoinPoint joinPoint, Throwable e) {
 		
 		System.out.println("\nafter throwing  exception  ");
-		System.out.println(e.getMessage());
+		 
 		
 	}
 }
