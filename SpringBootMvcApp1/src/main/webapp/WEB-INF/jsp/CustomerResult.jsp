@@ -11,20 +11,16 @@
 </style>
 </head>
 <body>
-	<form action="cstform" method="post">
-	<h1>Customer Form</h1>
+	<form>
+	<h1>Customer Data</h1>
 		<div>
-			<label>Enter Id</label> <input name="id">
+			Id is ${customer.customerId}
 		</div>
 		<div>
-			<label>Enter Name</label> <input name="name">
+		Id is ${customer.customerName}
 		</div>
 		<div>
-			<label>Enter Salary</label> <input name="salary">
-		</div>
-		<div>
-		<button type="submit">Login</button>
-		<button type="reset">Cancel</button>
+		salary is ${customer.customerSalary}
 		</div>
 
 	</form>
