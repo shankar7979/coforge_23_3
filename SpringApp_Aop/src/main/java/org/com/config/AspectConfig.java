@@ -16,8 +16,6 @@ public class AspectConfig {
 		return new Calculator();
 	}
 
-
-
 	@Bean
 	public CalculatorAspect getCalculatorAspect() {
 		return new CalculatorAspect();

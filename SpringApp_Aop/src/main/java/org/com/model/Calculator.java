@@ -8,4 +8,10 @@ public class Calculator {
 		System.out.println("sum of "+a+" and "+b+" is "+(a+b));
 		return a+b;
 	}
+	
+	public int division(int a, int b) {
+		System.out.println("division of "+a+" and "+b+" is "+(a/b));
+		return a/b;
+	}
+	
 }

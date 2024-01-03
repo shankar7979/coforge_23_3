@@ -16,5 +16,10 @@ public class CalculatorMain {
 		
 		calculator.addition(11, 22);
 		
+		calculator.division(11, 3);
+		
+		calculator.division(11, 0);
+		
+		
 	}
 }
