@@ -17,7 +17,7 @@
 			Id is ${customer.customerId}
 		</div>
 		<div>
-		Id is ${customer.customerName}
+		Name is ${customer.customerName}
 		</div>
 		<div>
 		salary is ${customer.customerSalary}
