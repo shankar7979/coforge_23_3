@@ -35,7 +35,6 @@ public class CustomerController {
 		else if (salary <= 0) {
 			throw new CustomerException("invalid salary  <br>salary is empty or zero or -ve");
 		} else {
-
 			Customer customer = new Customer();
 			customer.setCustomerId(id);
 			customer.setCustomerName(name);
