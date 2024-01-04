@@ -43,9 +43,14 @@ public class CustomerController {
 			return "CustomerResult";
 		}
 	}
-	@ExceptionHandler(value = CustomerException.class)
-	public String myexception() {
-		return "CustomerError";
-	}
+//	@ExceptionHandler(value = CustomerException.class)
+//	public String myexception() {
+//		return "CustomerError";
+//	}
+//	
+//	@ExceptionHandler(value = Exception.class)
+//	public String myexception1() {
+//		return "CustomerError";
+//	}
 
 }

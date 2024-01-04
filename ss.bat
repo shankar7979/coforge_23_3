@@ -1,6 +1,6 @@
 
  cp -r C:\Users\Training\Downloads\SpringBootApp1\SpringBootApp1 .
- cp -r C:\Users\Training\Downloads\SpringBootMvcApp1\SpringBootMvcApp1 .
+  cp -r C:\Users\Training\Downloads\SpringBootMvcApp1\SpringBootMvcApp1 .
 
 
   cp -r C:\Users\Training\Downloads\SpringBootRestApp1\SpringBootRestApp1 .
