@@ -1,5 +1,5 @@
 
- rem cp -r C:\Users\Training\Downloads\SpringBootApp1\SpringBootApp1 .
+  cp -r C:\Users\Training\Downloads\SpringBootDataJpa1\SpringBootDataJpa1 .
   rem cp -r C:\Users\Training\Downloads\SpringBootMvcApp1\SpringBootMvcApp1 .
 
 
