@@ -52,10 +52,10 @@ public class CustomerService {
 	}
 
 	public List<Customer> getAllCustomer() {
-		if(dao.findAll().size()==0)
+		if (dao.findAll().size() == 0)
 			throw new CustomerException("customer list is empty");
-		else	
-		return dao.findAll();
+		else
+			return dao.findAll();
 	}
 
 }
