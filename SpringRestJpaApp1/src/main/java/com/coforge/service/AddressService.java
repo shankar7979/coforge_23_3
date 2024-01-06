@@ -5,7 +5,6 @@ import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import com.coforge.dao.AddressDao;
 import com.coforge.exception.AddressException;
 import com.coforge.model.Address;
@@ -14,7 +13,7 @@ import com.coforge.model.Address;
 public class AddressService {
 
 	@Autowired
-AddressDao  dao;
+	AddressDao dao;
 
 	public Address addAddress(Address c) {
 		Optional<Address> findById = dao.findById(c.getAddress_id());
