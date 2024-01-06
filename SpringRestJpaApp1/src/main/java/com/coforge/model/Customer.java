@@ -1,8 +1,10 @@
 package com.coforge.model;
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToOne;
 import lombok.Data;
 
 @Entity
@@ -14,4 +16,7 @@ public class Customer {
 	private long customerId;
 	private  String  customerName;
 	private  float customerSalary;
+	
+	@OneToOne(cascade =  CascadeType.ALL)
+	private  Address address;
 }

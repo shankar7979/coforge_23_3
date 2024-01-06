@@ -63,7 +63,7 @@ public class CustomerController {
 	public ResponseEntity<Customer> removeCustomer(@PathVariable("id") long id) {
 		try {
 			return  new ResponseEntity<Customer> (
-		 service.removeCustomer(id), HttpStatus.NOT_FOUND);
+		 service.removeCustomer(id), HttpStatus.OK);
 		}
 		catch (CustomerException e) {
 			return new ResponseEntity(e.getMessage(),HttpStatus.NOT_FOUND);
