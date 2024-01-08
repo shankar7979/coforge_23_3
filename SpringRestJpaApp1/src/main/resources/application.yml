@@ -10,3 +10,6 @@ spring:
     driver-class-name:   com.mysql.cj.jdbc.Driver 
     
      
+  mvc:
+    pathmatch:
+      matching-strategy:  ant-path-matcher
