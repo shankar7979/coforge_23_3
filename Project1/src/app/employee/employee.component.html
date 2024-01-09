@@ -1,6 +1,5 @@
-<div style="border:inset  blue 20px" class="style1">
+<div>
     <p>employee works!</p>
-
     <div>
         Id is {{id}}
     </div>
@@ -11,8 +10,9 @@
         Salary is {{salary}}
     </div>
       <h3>Address</h3>
-      <table>
-         <tr>
+      <table class="table table-striped table-bordered bg-info text-primary">
+        
+         <tr class="bg-dark text-light">
             <th>Address Id</th>
             <th>Address Location</th>
             <th>Address City</th>
@@ -27,8 +27,6 @@
             <td>
                 {{addr.addr_city}}
             </td>
-
          </tr>
-
       </table>
 </div>
