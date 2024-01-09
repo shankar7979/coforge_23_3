@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { Address } from './address';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-employee',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './employee.component.html',
   styleUrl: './employee.component.css'
 })

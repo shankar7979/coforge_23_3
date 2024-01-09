@@ -10,4 +10,25 @@
     <div>
         Salary is {{salary}}
     </div>
+      <h3>Address</h3>
+      <table>
+         <tr>
+            <th>Address Id</th>
+            <th>Address Location</th>
+            <th>Address City</th>
+         </tr>
+         <tr *ngFor="let addr of address" >
+            <td>
+                {{addr.addr_id}}
+            </td>
+            <td>
+                {{addr.addr_location}}
+            </td>
+            <td>
+                {{addr.addr_city}}
+            </td>
+
+         </tr>
+
+      </table>
 </div>
