@@ -10,4 +10,6 @@ spring:
     driver-class-name:   com.mysql.cj.jdbc.Driver 
   application:
     name:  Customer Application
-     
+server:
+  port:  6666
+       
