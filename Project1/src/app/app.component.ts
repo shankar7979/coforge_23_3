@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { EmployeeComponent } from "./employee/employee.component";
 import { CustomerComponent } from './customer/customer.component';
+import { PersonComponent } from './person/person.component';
 
 @Component({
     selector: 'app-root',
@@ -10,7 +11,7 @@ import { CustomerComponent } from './customer/customer.component';
     templateUrl: './app.component.html',
     styleUrl: './app.component.css',
     imports: [CommonModule, RouterOutlet, EmployeeComponent,
-       CustomerComponent]
+       CustomerComponent, PersonComponent]
 })
 export class AppComponent {
   title = 'Project1';
