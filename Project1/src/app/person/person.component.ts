@@ -12,8 +12,13 @@ import { CommonModule } from '@angular/common';
 })
 export class PersonComponent {
 @Input() person: Person;
+submit:boolean=false;
 
  constructor(){
    this.person=new Person();
  }
+ onsubmit(){
+  this.submit=true;
+ }
+
 }
