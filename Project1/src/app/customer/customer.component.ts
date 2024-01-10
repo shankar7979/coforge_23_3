@@ -29,4 +29,8 @@ export class CustomerComponent {
    this.customer=customerdata;
  }
 
+ hello(){
+  alert('called ')
+ }
+
 }
