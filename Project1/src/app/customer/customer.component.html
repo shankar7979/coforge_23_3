@@ -1,7 +1,7 @@
 <div class="container">
      <div>
        <h2> Customer Data</h2>
-         <table class="table">
+         <table class="table table-striped border border-primary p-5">
             <thead>
                 <tr>
                     <th>Customer Id</th>
@@ -20,6 +20,72 @@
                     </td>
                     <td>
                         {{customer1.customerSalary}}
+                    </td>
+
+
+                </tr>
+            </tbody>
+         </table>
+
+
+         <h2> Customer Data With Salary >=50000</h2>
+         <h3>Ng IF Directive</h3>
+         <table class="table table-striped border border-primary p-5">
+            <thead>
+                <tr>
+                    <th>Customer Id</th>
+                    <th>Customer Name</th>
+                    <th>Customer Salary</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr  *ngFor="let customer1 of customer">
+                    <td *ngIf="customer1.customerSalary>=50000">
+                        {{customer1.customerId}}
+                    </td>
+                    
+                    <td *ngIf="customer1.customerSalary>=50000">
+                        {{customer1.customerName}}
+                    </td>
+                    <td *ngIf="customer1.customerSalary>=50000">
+                        {{customer1.customerSalary}}
+                    </td>
+
+
+                </tr>
+            </tbody>
+         </table>
+
+         <h2> Customer Data With Salary >=50000</h2>
+         <h3>Ng Switch Directive</h3>
+         <table class="table table-striped border border-primary p-5">
+            <thead>
+                <tr>
+                    <th>Customer Id</th>
+                    <th>Customer Name</th>
+                    <th>Customer Salary</th>
+                    <th>Customer Post</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr  *ngFor="let customer1 of customer" >
+                    <td>
+                        {{customer1.customerId}}
+                    </td>
+                    
+                    <td>
+                        {{customer1.customerName}}
+                    </td>
+                    <td>
+                        {{customer1.customerSalary}}
+                    </td>
+                    <td [ngSwitch]="customer1.customerName">
+                       <span *ngSwitchCase="'sumit kumar'">Manager</span>
+                       <span *ngSwitchCase="'amit kumar'">Director</span>
+                       <span *ngSwitchCase="'vimal kumar'">Regional Manager</span>
+                       <span *ngSwitchCase="'samar kumar'">Manager</span>
+                       <span *ngSwitchCase="'kamal kumar'">Accountant</span>
+                       <span *ngSwitchDefault="'kamal kumar'">Wrong data</span>
                     </td>
 
 
