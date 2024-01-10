@@ -31,13 +31,29 @@
             Id is {{person.id}}
         </div>
         <div>
-            Name is {{person.name}}
+            Name is {{person.name|uppercase}}
         </div>
         <div>
-            Salary is {{person.salary}}
+            Name is {{person.name|titlecase}}
         </div>
         <div>
-            Dob is {{person.dob}}
+            Salary is {{person.salary|currency}}
         </div>
+        
+        <div>
+            Salary is {{person.salary|currency:'Rs'}}
+        </div>
+        
+        <div>
+            Salary is {{person.salary|currency:'₹'}}
+        </div>
+
+        <div>
+            Dob is {{person.dob|date}}
+        </div>
+        
+    <div>
+        Person data {{person|json}}
+      </div>
     </div>
 </div>
