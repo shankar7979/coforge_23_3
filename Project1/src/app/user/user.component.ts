@@ -12,6 +12,12 @@ import { FormsModule } from '@angular/forms';
 })
 export class UserComponent {
   @Input() user:User;
+  submitted:boolean=false;
+
+   formSubmit(){
+    this.submitted=true;
+   }
+
    constructor(){
     //this.user=new User(10001,'aman kumar',20000);
     this.user=new User(0,'',0);
