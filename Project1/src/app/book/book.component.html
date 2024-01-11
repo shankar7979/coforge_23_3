@@ -2,29 +2,66 @@
     <form class="bg-info p-5 m-5 text-blue w-75" style="border-radius: 20px;">
         <div class="form-group">
             <label>Enter Book isbn</label>
-            <input class="form-control" placeholder="Enter Book ISBN"  [(ngModel)]="book.isbn"
-            [ngModelOptions]="{standalone: true}"
-            >
+            <input class="form-control" placeholder="Enter Book ISBN" [(ngModel)]="book.isbn"
+                [formControl]="isbnControl">
+            <span [hidden]="isbnControl.valid ||isbnControl.untouched">
+                invalid isbn
+            </span>
+            <span [hidden]="!isbnControl.hasError('minlength')">
+                book isbn must of minimun 5 digit
+            </span>
+            <span [hidden]="!isbnControl.hasError('maxlength')">
+                book isbn must of maximun 7 digit
+            </span>
+
+
         </div>
 
         <div class="form-group">
             <label>Enter Book Name</label>
             <input class="form-control" placeholder="Enter Book Name" [(ngModel)]="book.bname"
-            [ngModelOptions]="{standalone: true}"
-            >
+                [formControl]="bnameControl">
+            <span [hidden]="bnameControl.valid ||bnameControl.untouched">
+                book name is empty
+            </span>
+            <span [hidden]="!bnameControl.hasError('minlength')">
+                book name must of minimun 5 character
+            </span>
+            <span [hidden]="!bnameControl.hasError('maxlength')">
+                book name must of maximun 20 character
+            </span>
+
         </div>
         <div class="form-group">
             <label>Enter Book category</label>
             <input class="form-control" placeholder="Enter Book Category" [(ngModel)]="book.category"
-            [ngModelOptions]="{standalone: true}"
-            >
+                [formControl]="categoryControl">
+            <span [hidden]="categoryControl.valid ||categoryControl.untouched">
+                invalid category
+            </span>
+            <span [hidden]="!categoryControl.hasError('minlength')">
+                book category must of minimun 5 character
+            </span>
+            <span [hidden]="!categoryControl.hasError('maxlength')">
+                book category must of maximun 15 character
+            </span>
         </div>
 
         <div class="form-group">
             <label>Enter Book Cost</label>
             <input class="form-control" placeholder="Enter Book Cost" [(ngModel)]="book.cost"
-            [ngModelOptions]="{standalone: true}"
-            >
+                [formControl]="costControl">
+            <span [hidden]="costControl.valid ||costControl.untouched">
+                invalid cost
+            </span>
+
+            <span [hidden]="!costControl.hasError('minlength')">
+                book cost must of minimun 10
+            </span>
+            <span [hidden]="!costControl.hasError('maxlength')">
+                book category must of maximum 99999
+            </span>
+
         </div>
         <div>
             <input type="submit" class="btn btn-primary">
