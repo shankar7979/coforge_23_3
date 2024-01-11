@@ -1,13 +1,13 @@
 <div class="container">
 
     <div class="text-light p-5 bg-primary m-5 w-75" style="border-radius: 10pt;">
-    <form #userForm=ngForm>
+        
         <h2>Template Driven Form</h2>
         <h3>User Form</h3>
         <div class="form-group">
             <label>Enter Id</label>
-            <input name="user.userId" [(ngModel)]="user.userId" class="form-control" required #user.userId="ngModel" >
-            <div *ngIf="user.userId.touched && user.userId.errors?.['required']">
+            <input name="userId" [(ngModel)]="user.userId"  class="form-control" required   #userId="ngModel">
+            <div *ngIf="userId.touched && userId.errors?.['required']">
                      id is blank
             </div>           
 
@@ -15,9 +15,9 @@
 
         <div class="form-group">
             <label>Enter Name</label>
-            <input name="user.userName" [(ngModel)]="user.userName" class="form-control" minlength="5" maxlength="20" required=""
-            #user.userName="ngModel">
-            <div *ngIf="user.userName.touched && user.userName.errors?.['required']">
+            <input name="userName" #userName="ngModel" [(ngModel)]="user.userName" class="form-control" minlength="5" maxlength="20" required=""
+            >
+            <div *ngIf="userName.touched && userName.errors?.['required']">
                 name is blank
        </div>    
         </div>
@@ -27,7 +27,7 @@
             <input name="user.userName" [(ngModel)]="user.userSalary" class="form-control" required="">
         </div>
 
-    </form>
+    
 
     </div>
     <div class="bg-info m-5 w-75 p-5" style="font-weight: bolder; font-size: x-large;border-radius: 10pt;">
