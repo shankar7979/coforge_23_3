@@ -12,6 +12,38 @@
                 <tr>
                     <th>Customer Id</th>
                     <th>Customer Name</th>
+                    <th>Customer Name</th>
+                    <th>Customer Salary</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let customer1 of customer">
+                    <td>
+                        {{customer1.customerId}}
+                    </td>
+
+                    <td>
+                        {{customer1.customerName}}
+                    </td>
+                    <td>
+                        {{customer1.customerName|uppercase|slice:0:5}}
+                    </td>
+                    <td>
+                        {{customer1.customerSalary}}
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+
+
+        <hr>
+        <h2> Customer Data</h2>
+        <table class="table table-striped border border-primary p-5">
+            <thead>
+                <tr>
+                    <th>Customer Id</th>
+                    <th>Customer Name</th>
                     <th>Customer Salary</th>
                 </tr>
             </thead>
@@ -27,8 +59,6 @@
                     <td>
                         {{customer1.customerSalary}}
                     </td>
-
-
                 </tr>
             </tbody>
         </table>
