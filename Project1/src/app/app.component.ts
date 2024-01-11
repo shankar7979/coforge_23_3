@@ -6,6 +6,7 @@ import { CustomerComponent } from './customer/customer.component';
 import { PersonComponent } from './person/person.component';
 import { PipeExampleComponent } from './pipe-example/pipe-example.component';
 import { UserComponent } from './user/user.component';
+import { BookComponent } from './book/book.component';
 
 @Component({
     selector: 'app-root',
@@ -13,7 +14,7 @@ import { UserComponent } from './user/user.component';
     templateUrl: './app.component.html',
     styleUrl: './app.component.css',
     imports: [CommonModule, RouterOutlet, EmployeeComponent,
-       CustomerComponent, PersonComponent, PipeExampleComponent, UserComponent]
+       CustomerComponent, PersonComponent, PipeExampleComponent, UserComponent,BookComponent]
 })
 export class AppComponent {
   title = 'Project1';
