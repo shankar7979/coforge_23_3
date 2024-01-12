@@ -14,7 +14,7 @@ spring:
   application:
     name:  Customer Application
 server:
-  port:  6666
+  port:  8080
   
   
 #spring.jpa.properties.hibernate.column_ordering_strategy=legacy  
