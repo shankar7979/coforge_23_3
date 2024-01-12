@@ -13,7 +13,14 @@ import { FormsModule } from '@angular/forms';
 })
 export class CustomeraddComponent {
   @Input() customer:Customer;
+  msg:string='';
 constructor(private service:CustomerService){
   this.customer=new Customer();
+}
+addcustomer(){
+  this.service.addCustomer(this.customer).subscribe(
+    data=>this.msg="record added",
+    error=>this.msg=error.error
+  );
 }
 }
