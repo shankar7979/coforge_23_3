@@ -3,6 +3,7 @@ import { ShowallcustomerComponent } from './showallcustomer/showallcustomer.comp
 import { CustomeraddComponent } from './customeradd/customeradd.component';
 
 export const routes: Routes = [
-    {path:'showall',component:ShowallcustomerComponent},
+    {path:'',component:CustomeraddComponent},
     {path:'add',component:CustomeraddComponent},
+    {path:'showall',component:ShowallcustomerComponent},
 ];

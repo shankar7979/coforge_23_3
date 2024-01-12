@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 import { CustomerService } from '../service/customer.service';
 import { Observable } from 'rxjs';
 import { Customer } from '../model/customer';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-showallcustomer',
@@ -14,8 +15,13 @@ import { Customer } from '../model/customer';
 export class ShowallcustomerComponent {
    customer: Observable<Customer[]>
 
-  constructor(service:CustomerService){
+  constructor(service:CustomerService, private router:Router){
     this.customer=service.getAllCustomer();
+  }
+
+
+  addcustomer(){
+    this.router.navigate(['/add'])
   }
 
 }
