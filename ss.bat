@@ -1,4 +1,4 @@
-cp -r C:\angular_project\Project1\src Project1
+cp -r C:\angular_project\Angular_crud\src  "angular spring boot\Angular_crud"
 
 rem  cp -r C:\Users\Training\eclipse-workspace1\SpringEurekaServer .
 rem cp -r C:\Users\Training\eclipse-workspace1\SpringRestJpaApp1 .
