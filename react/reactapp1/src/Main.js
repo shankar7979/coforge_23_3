@@ -2,7 +2,7 @@ import { User } from "./User";
 
 const Main=()=>{
     return(
-        <User></User>
+        <User country='india' ></User>
         )
 }
 export default Main;
