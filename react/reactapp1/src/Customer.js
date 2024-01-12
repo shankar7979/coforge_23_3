@@ -12,6 +12,16 @@ const Customer=()=>{
                 <td>{mycustomer[0].name}</td>
                 <td>{mycustomer[0].salary}</td>
             </tr>
+            
+                {
+                    mycustomer.map(a=>
+                        <tr>
+                       <td>{a.id}</td>   
+                       <td>{a.name}</td>   
+                       <td>{a.salary}</td>   
+                       </tr>
+                    )
+                }
         </table>
            
         </div>

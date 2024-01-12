@@ -5,13 +5,15 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import App2 from './App2';
 import Customer from './Customer';
+import Main from './Main';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     {/* <App /> */}
     {/* <App2></App2> */}
-    <Customer></Customer>
+    {/* <Customer></Customer> */}
+    <Main></Main>
   </React.StrictMode>
 );
 
