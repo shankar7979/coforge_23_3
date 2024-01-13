@@ -1,13 +1,15 @@
 import logo from './logo.svg';
 import './App.css';
+import { Counter1 } from './Counter1';
 
 function App() {
   return (
           <>
-         <h1>hello world</h1>
+         {/* <h1>hello world</h1>
          <p>no1 is{x} </p>
          <p>no2 is{y} </p>
-         <p>sum is{z} </p>
+         <p>sum is{z} </p> */}
+         <Counter1></Counter1>
         </>
   );
 }

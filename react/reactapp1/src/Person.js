@@ -1,7 +1,6 @@
 //export default function Person(props)
 const Person=(props)=>
 {
-
      return(
         <div className="container border border-primary bg-info text-warning p-5 m-5 w-50">
             <p>Person data</p>
@@ -11,11 +10,10 @@ const Person=(props)=>
         </div>
      )
 }
-
 Person.defaultProps={
     'id':5656565,
     'name':'harendra kumar',
     'salary':45000,
-    'dob':'2021-10-12'
+    'dob':new Date('2021-10-12').toDateString()
 }
 export default Person;
