@@ -34,7 +34,5 @@ export class Book extends Component {
             </div>
         )
     }
-
-
 }
 
