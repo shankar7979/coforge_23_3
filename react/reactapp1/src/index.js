@@ -6,6 +6,7 @@ import reportWebVitals from './reportWebVitals';
 import App2 from './App2';
 import Customer from './Customer';
 import Main from './Main';
+import Person from './Person';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -13,7 +14,10 @@ root.render(
     {/* <App /> */}
     {/* <App2></App2> */}
     {/* <Customer></Customer> */}
-    <Main></Main>
+    {/* <Main></Main> */}
+    {/* <Person id='10001' name='vimal kumar' salary='12000'></Person> */}
+    <Person></Person>
+
   </React.StrictMode>
 );
 
