@@ -3,7 +3,7 @@ import {MyBook} from './book/MyBook';
 const Main=()=>{
     return(
         <div>
-        {/* <User country='india' ></User> */}
+         <User country='india' ></User>
         <MyBook></MyBook>
         </div>
         )

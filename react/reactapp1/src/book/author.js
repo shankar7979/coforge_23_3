@@ -13,7 +13,7 @@ export class Author extends Component {
         return (
             <div>
                 <h2>Author Page</h2>
-                <table className="table table-striped">
+                <table className="table table-striped table-bordered " style={{'backgroundColor':'lightyellow'}}>
                     <tr>
                         <th>Id</th>
                         <td>{this.state.author_id}</td>
@@ -23,9 +23,30 @@ export class Author extends Component {
                         <td>{this.state.author_name}</td>
                     </tr>
                     <tr>
-                        <th>Name</th>
+                        <th>Location</th>
                         <td>{this.state.author_location}</td>
                     </tr>
+                   <tr>
+                    <th>Authors Cars</th>
+                   </tr>
+                   <tr>
+                   <table className="table table-striped table-bordered">
+                       <tr>
+                        <th>Reg No</th>
+                        <th>Model</th>
+                        <th>Cost</th>
+                       </tr>
+                       {
+                        this.props.car.map(a=>
+                            <tr>
+                                <td>{a.regno}</td>
+                                <td>{a.model}</td>
+                                <td>{a.cost}</td>
+                            </tr>
+                            )
+                       }
+                   </table>
+                   </tr>
                 </table>
             </div>
         )

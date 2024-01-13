@@ -1,6 +1,7 @@
 import { Component } from "react";
 import { Book } from "./book";
 import { Author } from "./author";
+import Cars from "./data/car";
 
 export class MyBook extends Component{
     constructor(props){
@@ -9,9 +10,15 @@ export class MyBook extends Component{
     render(){
         return(
             <div className="container">
-            <Book></Book>
-            <Author></Author>
+            <Book  book_publisher={publisher} ></Book>
+            <Author car={Cars}></Author>
             </div>
         )
     }
+}
+
+const publisher={
+    'id':6767576,
+    'name':'india publication',
+    'location':'chennai'
 }
