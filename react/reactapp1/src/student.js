@@ -12,6 +12,15 @@ export class Student extends Component {
             'dob': new Date('1998-11-30').toDateString(),
         }
     }
+    changeStudentData=()=>{
+        this.setState({
+            roll:90001,
+            name:'kamal kant',
+            subject:'hindi',
+            marks:96,
+            dob:new Date(1995-10-12).toDateString()
+    })
+}
     render() {
         return (
             <>
@@ -35,7 +44,7 @@ export class Student extends Component {
 
                 <div className="container w-50 mt-5">
 
-                    <button className="btn btn-primary"> Change Student Data
+                    <button className="btn btn-primary" onClick={this.changeStudentData}> Change Student Data
                     </button>
 
                 </div>
