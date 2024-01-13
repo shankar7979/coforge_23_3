@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import { Counter1 } from './Counter1';
+import { Student } from './student';
 
 function App() {
   return (
@@ -9,7 +10,8 @@ function App() {
          <p>no1 is{x} </p>
          <p>no2 is{y} </p>
          <p>sum is{z} </p> */}
-         <Counter1></Counter1>
+         {/* <Counter1></Counter1> */}
+        <Student regno='676767' name='laxmmi bai school' location='bhopal'></Student>
         </>
   );
 }

@@ -5,9 +5,15 @@ export class Counter1 extends Component{
     constructor(props){
          super(props);
          this.state={
-            counter:1
+            counter:1,
          }
          this.increment=this.increment.bind(this);
+    }
+    
+    decrement=()=>{
+        this.setState({
+            counter:this.state.counter-1
+        })
     }
 
     increment(){
@@ -24,6 +30,9 @@ export class Counter1 extends Component{
                      </div>
                      <div>
                         <button onClick={this.increment}> Increment</button>
+                     </div>
+                     <div>
+                        <button onClick={this.decrement}> Decrement</button>
                      </div>
             </div>
         )
