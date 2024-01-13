@@ -1,13 +1,12 @@
 import { Component } from "react";
 
-class Author extends Component {
-
+export class Author extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            'authod_id': 78878787,
-            'authod_name': 'suman kumar',
-            'authod_location': 'kolkotta',
+            'author_id': 78878787,
+            'author_name': 'suman kumar',
+            'author_location': 'kolkotta',
         }
     }
     render() {
@@ -17,20 +16,17 @@ class Author extends Component {
                 <table className="table table-striped">
                     <tr>
                         <th>Id</th>
-                        <td>{this.author.id}</td>
+                        <td>{this.state.author_id}</td>
                     </tr>
-
                     <tr>
                         <th>Name</th>
-                        <td>{this.author.name}</td>
+                        <td>{this.state.author_name}</td>
                     </tr>
-
                     <tr>
                         <th>Name</th>
-                        <td>{this.author.location}</td>
+                        <td>{this.state.author_location}</td>
                     </tr>
                 </table>
-
             </div>
         )
     }
