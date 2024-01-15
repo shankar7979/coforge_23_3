@@ -25,4 +25,18 @@ export default class Bus extends Component{
             </>
         )
     }
+ componentDidMount(){
+    console.log('componentDidMount called ')
+ }
+ componentWillMount(){
+    console.log('componentWillMount called ')
+}
+shouldComponentUpdate(){
+    console.log('should component update  ')
+    }
+
+}
+Bus.defaultProps={
+    'fare':100,
+    'route':'delhi to faridabad'
 }

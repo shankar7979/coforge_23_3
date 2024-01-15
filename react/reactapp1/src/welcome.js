@@ -12,8 +12,9 @@ export  default function Welcome(){
             <Test2></Test2> */}
              {/* <Leader voter={Voter}></Leader>  */}
             {/* <MyCounter></MyCounter> */}
-            <Bus fare='70' route='noida to delhi'></Bus>
-            <Bus fare={data.fare} route={data.route}></Bus>
+            {/* <Bus fare='70' route='noida to delhi'></Bus>
+            <Bus fare={data.fare} route={data.route}></Bus> */}
+            <Bus></Bus>
         </div>
     )
 }
