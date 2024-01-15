@@ -13,4 +13,12 @@ function Greeting(){
         </div>
     )
 }
+const Test1=()=>{
+    return(
+        <div>
+            <h2>Test application</h2>
+        </div>
+    )
+}
 export {Greeting};
+export {Test1};
