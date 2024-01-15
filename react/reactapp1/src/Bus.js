@@ -1,4 +1,5 @@
 import { Component } from "react";
+import Clock from "./Clock";
 
 export default class Bus extends Component{
     constructor(props){
@@ -13,6 +14,11 @@ export default class Bus extends Component{
         return(
             <>
             <div className="border border-primary w-50 p-5 m-5">
+                <div style={{'float':'left','marginLeft':'400px','font-weight':'bold'
+                }}>
+                    <Clock></Clock>
+                </div>
+<br></br>
               <div>Reg no {this.state.regno}</div>
               <div>Name {this.state.name}</div>
               <div>State {this.state.state}</div>

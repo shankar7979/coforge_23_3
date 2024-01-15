@@ -6,6 +6,14 @@ export default class Clock extends Component{
         this.state={
             time:new Date().toLocaleTimeString()
         }
+        this.startclock();
+    }
+    startclock(){
+     setInterval(()=>{
+        this.setState({
+            time:new Date().toLocaleTimeString()
+        })
+     })
     }
     render(){
         return(
