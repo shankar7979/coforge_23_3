@@ -2,6 +2,7 @@ import Bus from './Bus';
 import Hello, { Greeting, Test1,Test2 } from './Example';
 import Leader from './Leader';
 import MyCounter from './MyCounter';
+import RegistrationForm from './RegistrationForm';
 import { Voter } from './data/Voter';
 export  default function Welcome(){
     return(
@@ -14,7 +15,8 @@ export  default function Welcome(){
             {/* <MyCounter></MyCounter> */}
             {/* <Bus fare='70' route='noida to delhi'></Bus>
             <Bus fare={data.fare} route={data.route}></Bus> */}
-            <Bus></Bus>
+            {/* <Bus></Bus> */}
+            <RegistrationForm></RegistrationForm>
         </div>
     )
 }
