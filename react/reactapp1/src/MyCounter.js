@@ -19,7 +19,7 @@ export default class MyCounter extends Component {
                 </div>
 
                 <button onClick={this.countIncrement1} >Increment1</button>
-                <button >Increment2</button>
+                <button onClick={this.countIncrement2} >Increment2</button>
             </div>
         )
     }
@@ -27,6 +27,11 @@ export default class MyCounter extends Component {
     countIncrement1 = () => {
         this.setState({
             c1: this.state.c1 + 1
+        })
+    }
+    countIncrement2 = () => {
+        this.setState({
+            c2: this.state.c2 + 1
         })
     }
 }
