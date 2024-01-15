@@ -1,5 +1,6 @@
 import Hello, { Greeting, Test1,Test2 } from './Example';
 import Leader from './Leader';
+import { Voter } from './data/Voter';
 export  default function Welcome(){
     return(
         <div>
@@ -7,7 +8,7 @@ export  default function Welcome(){
             <Greeting></Greeting>
             <Test1></Test1>
             <Test2></Test2> */}
-            <Leader></Leader>
+            <Leader voter={Voter}></Leader>
         </div>
     )
 }
