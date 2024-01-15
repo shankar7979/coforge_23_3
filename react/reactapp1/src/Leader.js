@@ -18,9 +18,9 @@ export default  class Leader extends Component {
                          <div>Id is {this.state.id}</div>
                          <div>Name is {this.state.name}</div>
                          <div>Age is {this.state.age}</div>
+                <div className="mt-3">
+                    <button type="button"  onClick={this.changeLeader}  className="btn btn-secondary">Change Leader data </button>
                 </div>
-                <div>
-                    <button type="button"  onClick={this.changeLeader} >Change Leader data </button>
                 </div>
             </React.Fragment>
         )
