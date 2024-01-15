@@ -1,3 +1,5 @@
+import React from "react";
+
 export default  function  Hello(){
     return(
         <div>
@@ -20,5 +22,13 @@ const Test1=()=>{
         </div>
     )
 }
+
+const Test2=()=>{
+    return (
+       React.createElement('h2','','Test2 App')
+    )
+}
+
 export {Greeting};
 export {Test1};
+export {Test2};
