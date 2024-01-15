@@ -33,6 +33,7 @@ export default class RegistrationForm extends Component {
                         <input className="form-control"
                             onChange={this.id_change}
                             value={this.state.id}></input>
+                            <span>{this.state.err_id}</span>
                     </div>
 
                     <div className="form-group">
@@ -41,6 +42,7 @@ export default class RegistrationForm extends Component {
                             onChange={this.name_change}
                             onClick={this.name_change}
                         ></input>
+                        <span>{this.state.err_name}</span>
                     </div>
                     <div>
                         <button type="submit">Login</button>
