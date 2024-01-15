@@ -6,14 +6,19 @@ export default class RegistrationForm extends Component {
         this.state = {
             id: 0,
             name: '',
+            'gender':'',
             err_id: '',
             err_name: '',
+            err_gender: '',
         };
     }
     id_change = (e) => {
         if (e.target.value === '') {
             //alert('id is blank')
             this.setState({ 'err_id': 'id is blank' })
+        }
+        else{
+            this.setState({ 'id': e.target.value })
         }
     }
 
@@ -22,6 +27,10 @@ export default class RegistrationForm extends Component {
             //alert('name is blank')
             this.setState({ 'err_name': 'name is blank' })
         }
+        else{
+            this.setState({ 'name': e.target.value })
+        }
+
     }
 
     render() {
@@ -46,7 +55,7 @@ export default class RegistrationForm extends Component {
                     </div>
                     <div>
                         <button type="submit">Login</button>
-                        <button type="reset">Login</button>
+                        <button type="reset">Cancel</button>
                     </div>
                     <hr>
                     </hr>
