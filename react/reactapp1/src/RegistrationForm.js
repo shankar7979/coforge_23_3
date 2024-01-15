@@ -6,7 +6,7 @@ export default class RegistrationForm extends Component {
         this.state = {
             id: 0,
             name: '',
-            'gender':'',
+            gender: '',
             err_id: '',
             err_name: '',
             err_gender: '',
@@ -17,7 +17,7 @@ export default class RegistrationForm extends Component {
             //alert('id is blank')
             this.setState({ 'err_id': 'id is blank' })
         }
-        else{
+        else {
             this.setState({ 'id': e.target.value })
         }
     }
@@ -27,7 +27,7 @@ export default class RegistrationForm extends Component {
             //alert('name is blank')
             this.setState({ 'err_name': 'name is blank' })
         }
-        else{
+        else {
             this.setState({ 'name': e.target.value })
         }
 
@@ -42,7 +42,7 @@ export default class RegistrationForm extends Component {
                         <input className="form-control"
                             onChange={this.id_change}
                             value={this.state.id}></input>
-                            <span>{this.state.err_id}</span>
+                        <span>{this.state.err_id}</span>
                     </div>
 
                     <div className="form-group">
@@ -52,6 +52,27 @@ export default class RegistrationForm extends Component {
                             onClick={this.name_change}
                         ></input>
                         <span>{this.state.err_name}</span>
+                    </div>
+                    <div className="form-group">
+                        <label>Select Gender</label>
+                        <input type="radio" className="form-control" value={this.state.gender}
+                            onChange={this.gender_change}
+                            onClick={this.gender_change}
+                            name="gender"
+                            checked
+                        />
+                        <label class="form-check-label" for="exampleRadios1">
+                            Male
+                        </label>
+                        <input type="radio" className="form-control" value={this.state.gender}
+                            onChange={this.gender_change}
+                            onClick={this.gender_change}
+                            name="gender"
+                        />
+                        <label class="form-check-label" for="exampleRadios1">
+                            Female
+                        </label>
+                        <span>{this.state.err_gender}</span>
                     </div>
                     <div>
                         <button type="submit">Login</button>

@@ -1,5 +1,6 @@
 import Bus from './Bus';
 import Hello, { Greeting, Test1,Test2 } from './Example';
+import { Hook1 } from './Hookprg1';
 import Leader from './Leader';
 import MyCounter from './MyCounter';
 import RegistrationForm from './RegistrationForm';
@@ -16,7 +17,8 @@ export  default function Welcome(){
             {/* <Bus fare='70' route='noida to delhi'></Bus>
             <Bus fare={data.fare} route={data.route}></Bus> */}
             {/* <Bus></Bus> */}
-            <RegistrationForm></RegistrationForm>
+            {/* <RegistrationForm></RegistrationForm> */}
+            <Hook1></Hook1>
         </div>
     )
 }
