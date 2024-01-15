@@ -18,10 +18,32 @@ export default  class Leader extends Component {
                          <div>Id is {this.state.id}</div>
                          <div>Name is {this.state.name}</div>
                          <div>Age is {this.state.age}</div>
+                         <hr>
+                         </hr>
                 <div className="mt-3">
                     <button type="button"  onClick={this.changeLeader}  className="btn btn-secondary">Change Leader data </button>
                 </div>
                 </div>
+                        
+                        <div className="container bg-info text-dark border border-primary p-5 m-5 w-50" style={{'borderRadius':'20px'}}>
+                            <h2>Voter Data </h2>
+                            <table className="table table-striped table-bordered" >
+                                <tr>
+                                    <th>Id</th>
+                                    <th>Name</th>
+                                    <th>Age</th>
+                                </tr>
+                                {
+                                    this.props.voter.map(a=>
+                                        <tr>
+                                            <td>{a.voter_id}</td>
+                                            <td>{a.Voter_name}</td>
+                                            <td>{a.age}</td>
+                                        </tr>
+                                        )
+                                }
+                            </table>
+                        </div>
             </React.Fragment>
         )
     }
