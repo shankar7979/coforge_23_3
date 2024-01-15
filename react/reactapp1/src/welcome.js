@@ -1,3 +1,4 @@
+import Bus from './Bus';
 import Hello, { Greeting, Test1,Test2 } from './Example';
 import Leader from './Leader';
 import MyCounter from './MyCounter';
@@ -9,8 +10,15 @@ export  default function Welcome(){
             <Greeting></Greeting>
             <Test1></Test1>
             <Test2></Test2> */}
-            {/* <Leader voter={Voter}></Leader> */}
-            <MyCounter></MyCounter>
+             {/* <Leader voter={Voter}></Leader>  */}
+            {/* <MyCounter></MyCounter> */}
+            <Bus fare='70' route='noida to delhi'></Bus>
+            <Bus fare={data.fare} route={data.route}></Bus>
         </div>
     )
 }
+const data={
+     "fare":40,
+     "route":'delhi to gurgaon'
+}
+
