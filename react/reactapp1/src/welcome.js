@@ -1,11 +1,11 @@
 import Bus from './Bus';
-import { Clock_hook } from './Clock_hook';
 import Hello, { Greeting, Test1,Test2 } from './Example';
 import { Hook1 } from './Hookprg1';
 import Leader from './Leader';
 import MyCounter from './MyCounter';
 import RegistrationForm from './RegistrationForm';
 import { Voter } from './data/Voter';
+import { Hook_form1 } from './hook_form1';
 export  default function Welcome(){
     return(
         <div>
@@ -19,8 +19,8 @@ export  default function Welcome(){
             <Bus fare={data.fare} route={data.route}></Bus> */}
             {/* <Bus></Bus> */}
             {/* <RegistrationForm></RegistrationForm> */}
-            <Hook1></Hook1>
-            <Clock_hook></Clock_hook>
+            {/* <Hook1></Hook1> */}
+            <Hook_form1></Hook_form1>
         </div>
     )
 }
