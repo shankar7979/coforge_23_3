@@ -5,13 +5,14 @@ import { Counter1 } from "./Counter1"
 import { Hook_form1 } from "./hook_form1"
 import Bus from "./Bus"
 import { Customer } from "./Customer_database1"
+import { NavBar } from "./NavBar"
 
-export const Dashboard=()=>{
+ const Dashboard=()=>{
 
     return(
         
         <Router>
-            <Navbar></Navbar>
+            <NavBar></NavBar>
             <Routes>
                 <Route path="/" element={<Clock></Clock>}></Route>
                 <Route path="/registrationform" element={<RegistrationForm></RegistrationForm>}></Route>
@@ -23,3 +24,4 @@ export const Dashboard=()=>{
         </Router>
     )
 }
+export default Dashboard;
