@@ -9,6 +9,17 @@ export const Hook_form1 = () => {
         console.log('use effect called ')
     })
 
+   const nameValidate=(e)=>{
+            if(e.target.value=='')
+            alert('name is blank')
+          else if(e.target.value.length<5)
+            alert('name length must of minimum 5 chars ')
+          else if(e.target.value.length>15)
+            alert('name length must of maximum 15 chars ')
+        else 
+            setName(e.target.value)
+    }
+
     return (
         <div>
             <div className="w-75 bg-info border p-5 m-5" style={{'border-radius':'20px'}}>
@@ -26,14 +37,9 @@ export const Hook_form1 = () => {
                         }
                     }></input>
                 </div>
-
                 <div className="form-group">
                     <label>Enter Name </label>
-                    <input className="form-control" onChange={(e) =>{
-                        if(e.target.value=='')
-                        alert('name is blank')
-                    else 
-                        setName(e.target.value)}}
+                    <input className="form-control" onChange={nameValidate}
                         value={name}
                     ></input>
                 </div>
