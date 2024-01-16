@@ -6,12 +6,12 @@ export const Hook_form1 = () => {
     const [name, setName] = useState('');
     const [err_name, setErrorName] = useState('');
 
-    useEffect = (() => {
+    useEffect(() => {
         document.title = 'react hook form validation'
         console.log('use effect called ')
+        setName('ram')
+        setId(10001)
     })
-
-
     return (
         <div>
             <div className="w-75 bg-info border p-5 m-5" style={{ 'border-radius': '20px' }}>
