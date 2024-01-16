@@ -9,7 +9,8 @@ import Main from './Main';
 import Person from './Person';
 import Welcome from './welcome';
 import Dashboard from './Dashboard';
-
+import App11 from './App11';
+import App20 from './navigate/App20';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
@@ -20,7 +21,8 @@ root.render(
     {/* <Person id='10001' name='vimal kumar' salary='12000'></Person> */}
     {/* <Person></Person> */}
     {/* <Welcome></Welcome> */}
-    <Dashboard></Dashboard>
+    {/* <Dashboard></Dashboard> */}
+    <App20></App20>
   </React.StrictMode>
 );
 
