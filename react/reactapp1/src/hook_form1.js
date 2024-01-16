@@ -22,10 +22,11 @@ export const Hook_form1 = () => {
                     <input
                         value={id}
                         className="form-control" onChange={(event) => {
+                            setId(event.target.value)
                             if (event.target.value == '')
                                 setErrorId('id is blank')
                             else
-                                setId(event.target.value)
+                            setErrorId('')
                         }
                         }></input>
                 </div>
@@ -36,14 +37,17 @@ export const Hook_form1 = () => {
                 <div className="form-group">
                     <label>Enter Name </label>
                     <input className="form-control" onChange={(e) => {
+                       setName(e.target.value)
                        if (e.target.value == '')
                             setErrorName('name is blank')
                         else if (e.target.value.length < 5)
                         setErrorName('name length must of minimum 5 chars ')
                         else if (e.target.value.length > 15)
                         setErrorName('name length must of maximum 15 chars ')
-                        else
-                            setName(e.target.value)
+                        else{
+                            
+                            setErrorName('')
+                        }
                     }
                     }
                         value={name}
