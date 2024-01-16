@@ -20,7 +20,9 @@ export class Customer extends Component{
     render(){
         return(
             <div>
-                <table className="table table-striped table-bordered bg-warning w-50 m-5">
+                <table className="table table-striped table-bordered bg-warning w-50"
+                 style={{'border':'solid','marginLeft':'300px','marginTop':'50px'}}
+                >
                 <h2>Customer Data</h2>
                     <tr>
                         <th>Id</th>
