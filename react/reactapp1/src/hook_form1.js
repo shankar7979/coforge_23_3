@@ -5,16 +5,25 @@ export const Hook_form1 = () => {
     const [err_id, setErrorId] = useState('');
     const [name, setName] = useState('');
     const [err_name, setErrorName] = useState('');
+    const [count,setCount]=useState(0);
 
+  
     useEffect(() => {
         document.title = 'react hook form validation'
         console.log('use effect called ')
         setName('ram')
         setId(10001)
-    })
+        setInterval(()=>{
+            setCount((count)=>count+1)
+        },1000)
+    });
     return (
+
         <div>
+             
             <div className="w-75 bg-info border p-5 m-5" style={{ 'border-radius': '20px' }}>
+            <div> Count is {count}</div>
+             
                 <h1>User Form</h1>
 
                 <div className="form-group">
