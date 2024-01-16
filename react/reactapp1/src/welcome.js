@@ -1,5 +1,6 @@
 import Bus from './Bus';
 import { Customer } from './Customer_database1';
+import { Customer_data } from './Customer_database2';
 import Hello, { Greeting, Test1,Test2 } from './Example';
 import { Hook1 } from './Hookprg1';
 import Leader from './Leader';
@@ -22,7 +23,8 @@ export  default function Welcome(){
             {/* <RegistrationForm></RegistrationForm> */}
             {/* <Hook1></Hook1> */}
             {/* <Hook_form1></Hook_form1> */}
-            <Customer></Customer>
+             <Customer></Customer> 
+            {/* <Customer_data></Customer_data> */}
         </div>
     )
 }

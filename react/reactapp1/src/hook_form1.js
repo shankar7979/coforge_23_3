@@ -16,7 +16,12 @@ export const Hook_form1 = () => {
         setInterval(()=>{
             setCount((count)=>count+1)
         },1000)
-    },[]);
+        
+        clearInterval(()=>{
+            setCount((count)=>count+1)
+        },1000)
+
+    });
     return (
 
         <div>
