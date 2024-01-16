@@ -8,6 +8,7 @@ import Customer from './Customer';
 import Main from './Main';
 import Person from './Person';
 import Welcome from './welcome';
+import Dashboard from './Dashboard';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -19,6 +20,7 @@ root.render(
     {/* <Person id='10001' name='vimal kumar' salary='12000'></Person> */}
     {/* <Person></Person> */}
     {/* <Welcome></Welcome> */}
+    <Dashboard></Dashboard>
   </React.StrictMode>
 );
 
