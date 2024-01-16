@@ -20,8 +20,8 @@ export class Customer extends Component{
     render(){
         return(
             <div>
+                <table className="table table-striped table-bordered bg-warning w-50 m-5">
                 <h2>Customer Data</h2>
-                <table>
                     <tr>
                         <th>Id</th>
                         <th>Name</th>
@@ -39,5 +39,9 @@ export class Customer extends Component{
             </div>
         )
     }
-
 }
+/*
+@CrossOrigin("http://localhost:3000/")
+public class CustomerController {
+}
+*/
