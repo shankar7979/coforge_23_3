@@ -7,11 +7,15 @@ To learn more about all the new changes and how to upgrade to version 6, please 
 Below are two examples of changes that you will need to adhere to if you’re running version 6.
 
 React Router v6 introduces a Routes component that replaces Switch. In order to use v6, you’ll need to convert all your <Switch> elements to <Routes>.
+
 React Router v6 introduces an element property that replaces the render property/function. Thus passing URL parameters to class components is a little different but can still be done using a Wrapper function component. Function components can retrieve URL parameters using Hooks the usual way.
-1️⃣ How to Retrieve URL Parameters Using Function Components
+
+
+How to Retrieve URL Parameters Using Function Components
 Below is one common and easy way to create react routes.
 
 index.js
+
 First, let’s wrap the root component with the BrowserRouter.
 
 import React from 'react';
