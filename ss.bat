@@ -11,7 +11,7 @@ rem cp -r C:\Users\Training\eclipse-workspace1\SpringConfigServer .
 rem cp -r C:\Users\Training\eclipse-workspace1\SpringRestJpaApp_RestTemplate .
 
 
-cp -r C:\react_project\reactapp1\src react\reactapp1\src C:\test\git\new1\react\reactapp1\src
+cp -r C:\react_project\reactapp1\src react\reactapp1\src C:\test\git\new1\react\reactapp1\
 
  git add *
   git commit -m "first commit"
