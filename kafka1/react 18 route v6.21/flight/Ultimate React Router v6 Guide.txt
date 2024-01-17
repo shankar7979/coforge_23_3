@@ -1,18 +1,4 @@
 How to Access URL Parameters Using React Router 6
-Christian Hur
-Christian Hur
-
-·
-Follow
-
-4 min read
-·
-Nov 28, 2021
-138
-
-
-
-
 
 React Router version 6 introduces several powerful new features, as well as improved compatibility with the latest versions of React. It also introduces a few breaking changes from version 5. This document is a comprehensive guide on how to upgrade your v4/5 app to v6 while hopefully being able to ship as often as possible as you go.
 
@@ -43,7 +29,9 @@ ReactDOM.render(
     , document.getElementById('root'));
 
 serviceWorker.unregister();
+
 App.js Component
+
 In the App.js module, let's create a route to the /flights/:id url. The FlightList component is a Function Component to display information about a single flight record. In order to do that, we'll need to fetch the id parameter from the URL.
 
 import React from 'react';
@@ -70,7 +58,9 @@ class App extends React.Component {
   }
 }
 export default App;
+
 FlightList.js Component
+
 In the FlightList component, retrieve the id URL parameter via the useParams() function. After the id is obtained, search the flightData list and retrieve the flight record matching the id.
 
 import React from 'react';
@@ -90,10 +80,12 @@ export function FlightList(props) {
         </div>
     )
 }
+
 2️⃣ How to Retrieve URL Parameters Using Class Components
 Class Components do not have access to Hooks so they cannot use useParams() from the react router. Of course there are other methods to pass data down to child components (e.g. using Context). The example demonstrated here is how to use a Wrapper function component to pass the params via the match property to a Class Component. Finally, it'll be possible to retrieve specific parameters from the params via the props object.
 
 App.js Component
+
 In the App.js module, let's create a route to the /edit/:id url. The EditFlight component is a Class Component to edit an existing flight record. In order to do that, we'll need to fetch the id parameter from the URL.
 
 import React from 'react';
@@ -131,7 +123,9 @@ class App extends React.Component {
   }
 }
 export default App;
+
 EditFlight.js Component
+
 In the EditFlight component, retrieve the id from the URL parameters via the props object. After the id is obtained, search the flightData list and retrieve the flight record matching the id. Finally, pass this record to another child component FlightForm to populate the form for editing.
 
 import React from 'react';
