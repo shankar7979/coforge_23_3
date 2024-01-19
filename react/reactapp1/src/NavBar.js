@@ -20,6 +20,13 @@ export const NavBar = () => {
                 <NavLink to='hookform' style={{'marginLeft':'50px'}}>
                     Hook Form
                 </NavLink>
+                <NavLink to='registration_form1' style={{'marginLeft':'50px'}}>
+                    Registration Form1
+                </NavLink>
+
+                <NavLink to='login' style={{'marginLeft':'50px'}}>
+                   User Form
+                </NavLink>
 
             </nav>
 

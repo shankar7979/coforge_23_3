@@ -6,7 +6,6 @@ export default class RegistrationForm extends Component {
         this.state = {
             id: 0,
             name: '',
-            gender: '',
             err_id: '',
             err_name: '',
             err_gender: '',
@@ -30,9 +29,21 @@ export default class RegistrationForm extends Component {
         else {
             this.setState({ 'name': e.target.value })
         }
-
     }
+    gender_change = (e) => {
+        const { name, value } = e.target;
+        if (e.target.value == '') {
+            this.setState({ 'err_gender': 'gender is blank' })
+        }
+        else {
+            this.setState({
 
+
+                
+                [name]: value
+            });
+        }
+    }
     render() {
         return (
             <div>
@@ -53,42 +64,46 @@ export default class RegistrationForm extends Component {
                         ></input>
                         <span>{this.state.err_name}</span>
                     </div>
-                    <div className="form-group">
-                        <label>Select Gender</label>
-                        <input type="radio" className="form-control" value={this.state.gender}
-                            onChange={this.gender_change}
-                            onClick={this.gender_change}
-                            name="gender"
-                            checked
-                        />
-                        <label class="form-check-label" for="exampleRadios1">
-                            Male
-                        </label>
-                        <input type="radio" className="form-control" value={this.state.gender}
-                            onChange={this.gender_change}
-                            onClick={this.gender_change}
-                            name="gender"
-                        />
-                        <label class="form-check-label" for="exampleRadios1">
-                            Female
-                        </label>
-                        <span>{this.state.err_gender}</span>
+                    <div className="form-group mt-2">
+                        <div>
+                            <label>Select Gender</label>
+                        </div>
+                        <div className="mt-2">
+                            <input type="radio" value='male'
+                                onChange={this.gender_change}
+                                onClick={this.gender_change}
+                                name="gender"
+                                class="form-check-input"
+                                style={{ 'marginLeft': '10px', 'marginRight': '5px' }}
+                            />
+                            <label class="form-check-label" for="exampleRadios1">
+                                Male
+                            </label>
+                            <input type="radio" value='female'
+                                onChange={this.gender_change}
+                                onClick={this.gender_change}
+                                name="gender"
+                                class="form-check-input" style={{ 'marginLeft': '10px', 'marginRight': '5px' }}
+                            />
+                            <label class="form-check-label" for="exampleRadios1">
+                                Female
+                            </label>
+                            <span style={{ 'marginLeft': '10px', 'color': 'red' }}>{this.state.err_gender}</span>
+                        </div>
                     </div>
-                    <div>
-                        <button type="submit">Login</button>
-                        <button type="reset">Cancel</button>
+                    <div className="mt-3">
+                        <button className='btn btn-primary' type="submit">Login</button>
+                        <button type="reset" className='btn btn-primary' style={{ 'marginLeft': '5px' }} >Cancel</button>
                     </div>
                     <hr>
                     </hr>
                 </div >
 
                 <div class="container bg-warning p-5 w-50" style={{ 'border-radius': '20px', 'marginLeft': '330px', 'marginTop': '50px' }}>
-
                     <div>Id is {this.state.id}</div>
                     <div>Name is {this.state.name}</div>
-
+                    <div>Gender is {this.state.gender}</div>
                 </div>
-
             </div>
         )
     }

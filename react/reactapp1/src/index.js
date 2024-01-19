@@ -21,8 +21,8 @@ root.render(
     {/* <Person id='10001' name='vimal kumar' salary='12000'></Person> */}
     {/* <Person></Person> */}
     {/* <Welcome></Welcome> */}
-    {/* <Dashboard></Dashboard> */}
-    <App20></App20>
+    <Dashboard></Dashboard> 
+    {/* <App20></App20> */}
     {/* <App11></App11> */}
   </React.StrictMode>
 );

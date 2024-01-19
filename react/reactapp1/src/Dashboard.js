@@ -6,6 +6,8 @@ import { Hook_form1 } from "./hook_form1"
 import Bus from "./Bus"
 import { Customer } from "./Customer_database1"
 import { NavBar } from "./NavBar"
+import RegistrationForm1 from "./RegistrationForm1"
+import UserForm from "./User/UserForm"
 
  const Dashboard=()=>{
 
@@ -20,6 +22,9 @@ import { NavBar } from "./NavBar"
                 <Route path="/hookform" element={<Hook_form1></Hook_form1>}></Route>
                 <Route path="/bus" element={<Bus></Bus>}></Route>
                 <Route path="/customer" element={<Customer></Customer>}></Route>
+                <Route path="/registration_form1" element={<RegistrationForm1></RegistrationForm1>}></Route>
+                {/* <Route path="/login/:name"  element={<UserForm></UserForm>}></Route> */}
+                <Route path="/login/:name"  element={<UserForm></UserForm>}></Route>
             </Routes>
         </Router>
     )
