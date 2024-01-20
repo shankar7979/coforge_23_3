@@ -8,6 +8,8 @@ import { Customer } from "./Customer_database1"
 import { NavBar } from "./NavBar"
 import RegistrationForm1 from "./RegistrationForm1"
 import UserForm from "./User/UserForm"
+import MyApp from "./User/hello1";
+import App21 from "./User/hello1";
 
  const Dashboard=()=>{
 
@@ -25,6 +27,7 @@ import UserForm from "./User/UserForm"
                 <Route path="/registration_form1" element={<RegistrationForm1></RegistrationForm1>}></Route>
                 {/* <Route path="/login/:name"  element={<UserForm></UserForm>}></Route> */}
                 <Route path="/login/:name"  element={<UserForm></UserForm>}></Route>
+                {/*<Route path="/app21" element={<App21></App21>}></Route>*/}
             </Routes>
         </Router>
     )

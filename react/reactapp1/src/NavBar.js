@@ -28,6 +28,10 @@ export const NavBar = () => {
                    User Form
                 </NavLink>
 
+                {/*<NavLink to='app21' style={{'marginLeft':'50px'}}>*/}
+                {/*    app21*/}
+                {/*</NavLink>*/}
+
             </nav>
 
         </div>
