@@ -10,10 +10,17 @@ const App = () => {
                 <NavLink to='/userform' style={{marginLeft: '100px'}}>
                     User Form
                 </NavLink>
+                
+                <NavLink to='/userdata' style={{marginLeft: '100px'}}>
+                    
+                </NavLink>
+
             </nav>
+
             <Routes>
                 <Route path="/" element={<UserForm/>}/>
-                <Route path="/userform/:name" element={<UserData/>}/>
+                <Route path="/userform" element={<UserForm/>}/>
+                <Route path="/userdata" element={<UserData/>}/>
             </Routes>
         </>
     )
