@@ -2,20 +2,17 @@ import { Component } from "react";
 import CustomerService from "./services/CustomerService";
 export default class AllCustomer extends Component {
 
-    //CustomerService service;
-
     constructor(props) {
-       //this.service=new CustomerService();
         super(props);
+       this.service=new CustomerService();
         this.state = {
             customer: []
         }
     }
     
     componentDidMount(){
-       //service=new CustomerService();
-       //this.service.getAllCustomer().then((res)=>{
-       new CustomerService().getAllCustomer().then((res)=>{
+       this.service.getAllCustomer().then((res)=>{
+       //new CustomerService().getAllCustomer().then((res)=>{
         this.setState({customer:res.data})
        })
     }

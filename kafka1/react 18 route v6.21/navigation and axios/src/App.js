@@ -1,7 +1,6 @@
-import {BrowserRouter as Router, NavLink, Route, Routes} from 'react-router-dom'
-import {Navigate} from 'react-router-dom';
-import UserForm from "./UserForm";
-import UserData from "./UserData";
+import { NavLink, Route, Routes} from 'react-router-dom'
+import UserForm from "./User/UserForm";
+import UserData from "./User/UserData";
 
 const App = () => {
     return (
@@ -12,7 +11,6 @@ const App = () => {
                 </NavLink>
                 
                 <NavLink to='/userdata' style={{marginLeft: '100px'}}>
-                    
                 </NavLink>
 
             </nav>

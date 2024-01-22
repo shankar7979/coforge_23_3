@@ -250,3 +250,7 @@ class BlogPost extends React.Component {
 
 export default withParams(BlogPost);
 Hopefully that helps you understand what we are thinking with v6. It's a low-level library and the hooks are a nice low-level abstraction that should allow you to build whatever you can think of and use whatever API you're most comfortable with, even if you decide to stick with class components.
+
+
+
+https://github.com/remix-run/react-router/issues/8146
