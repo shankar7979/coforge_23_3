@@ -164,3 +164,89 @@ export class EditFlight extends React.Component {
         // Implementation here
     }
 }
+
+
+=======================================
+
+ are absolutely not dropping support for class-based components, @AbrahamLopez10, but I think the API changes you pointed out do tend to illustrate some of the value of hooks.
+
+For example, in a world without hooks it makes a lot of sense to use render props instead of a hook. This is because the router knows some state and it needs a way to expose it to you so it can pass it through to your component, so a render prop makes it easy to do so.
+
+<Route
+  path="posts/:id"
+  render={({ match }) => <BlogPost id={match.params.id} />}
+/>
+
+class BlogPost extends React.Component {
+  render() {
+    let { id } = this.props;
+    // ...
+  }
+}
+However, in a world with hooks, we don't need a render prop for exposing state. Instead, you can just use the hook in your component directly.
+
+<Route path="posts/:id" element={<BlogPost />} />
+
+function BlogPost() {
+  let { id } = useParams();
+  // ...
+}
+In addition to eliminating the need for render props for sharing state, hooks also eliminate a lot of other prop-passing boilerplate code in other components that are rendered by <BlogPost>. For instance, without hooks if you wanted to pass the id URL param down to another component, you'd probably do something like this:
+
+class BlogPost extends React.Component {
+  render() {
+    return (
+      <div>
+        <PostHeader id={this.props.id} />
+        {/* ... */}
+      </div>
+    );
+  }
+}
+
+class PostHeader extends React.Component {
+  render() {
+    let { id } = this.props;
+    // ...
+  }
+}
+But with hooks, it's as simple as:
+
+function BlogPost() {
+  return (
+    <div>
+      <PostHeader />
+      {/* ... */}
+    </div>
+  );
+}
+
+function PostHeader() {
+  let { id } = useParams();
+  // ...
+}
+Anyway, that's my sales pitch for using hooks. I totally understand if you don't want to use them, but I think you could probably eliminate some of the boilerplate from your code if you did.
+
+As for shipping a withRouter-style HOC with v6, we can probably do that if you really need one. But we would probably spend a bunch of time bike-shedding all the stuff you want to include in your HOC props (do you want the history? the match? just the params?) when in reality it's really easy to just make your own HOC that is custom designed for the pieces you need.
+
+For example, you could make your own withNavigation or withParams HOC in a one-liner (again, thanks to the power of hooks!):
+
+// in hocs.js
+function withNavigation(Component) {
+  return props => <Component {...props} navigate={useNavigate()} />;
+}
+
+function withParams(Component) {
+  return props => <Component {...props} params={useParams()} />;
+}
+
+// in BlogPost.js
+class BlogPost extends React.Component {
+  render() {
+    let { id } = this.props.params;
+    // ...
+  }
+}
+
+export default withParams(BlogPost);
+Hopefully that helps you understand what we are thinking with v6. It's a low-level library and the hooks are a nice low-level abstraction that should allow you to build whatever you can think of and use whatever API you're most comfortable with, even if you decide to stick with class components.
