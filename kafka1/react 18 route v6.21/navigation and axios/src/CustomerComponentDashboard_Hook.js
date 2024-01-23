@@ -1,6 +1,6 @@
 import { NavLink, Route, Routes} from 'react-router-dom'
 import ShowAllCustomer from './Customer_Hook/ShowAllCustomer';
-import SearchCustomer from './CustomerComponent/SearchCustomer';
+import SearchCustomer from './Customer_Hook/SearchCustomer';
 
 const CustomerComponentDashboard_Hook = () => {
     return (
