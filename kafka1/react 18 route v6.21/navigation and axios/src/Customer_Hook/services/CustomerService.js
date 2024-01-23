@@ -12,7 +12,7 @@ export default class CustomerService{
     getCustomerById(id){
         //console.log('getCustomerById id is '+id);
        //return axios.get(url+'search/'+id);
-        return  axios.get('http://localhost:8080/customer/search/1');
+        return  axios.get(`http://localhost:8080/customer/search/1`);
     }
 
 }

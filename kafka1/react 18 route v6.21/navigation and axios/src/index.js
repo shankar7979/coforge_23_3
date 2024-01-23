@@ -10,7 +10,9 @@ import CustomerComponentDashboard from './CustomerComponentDashboard';
 import CustomerComponentDashboard_Hook from './CustomerComponentDashboard_Hook';
 import SearchCustomer from './Customer_Hook/SearchCustomer';
 import SearchCustomer1 from './Customer_Hook/SearchCustomer1';
+import SearchCustomer2 from './Customer_Hook/SearchCustomer2';
 import ShowAllCustomer from './Customer_Hook/ShowAllCustomer';
+import { SearchCustomer3 } from './Customer_Hook/SearchCustomer3';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -20,8 +22,10 @@ root.render(
     {/* <CustomerComponentDashboard></CustomerComponentDashboard> */}
     {/* <CustomerComponentDashboard_Hook></CustomerComponentDashboard_Hook> */}
     {/* <SearchCustomer></SearchCustomer> */}
-    <SearchCustomer1></SearchCustomer1>
-    {/* <ShowAllCustomer></ShowAllCustomer> */}
+     {/* <ShowAllCustomer></ShowAllCustomer>  */}
+    {/* <SearchCustomer1></SearchCustomer1> */}
+    {/* <SearchCustomer2></SearchCustomer2> */}
+    <SearchCustomer3></SearchCustomer3>
   </BrowserRouter>
 );
 
