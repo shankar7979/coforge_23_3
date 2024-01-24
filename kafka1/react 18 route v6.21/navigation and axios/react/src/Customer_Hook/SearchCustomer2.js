@@ -38,7 +38,6 @@ const SearchCustomer2= () => {
                             <td>{customer1.id}</td>
                             <td>{customer1.name}</td>
                         </tr>
-                
             </table>
             
  
@@ -52,10 +51,7 @@ const SearchCustomer2= () => {
                             <td>{customer2.id}</td>
                             <td>{customer2.name}</td>
                         </tr>
-                
             </table>
-
- 
         </div>
     )
 }

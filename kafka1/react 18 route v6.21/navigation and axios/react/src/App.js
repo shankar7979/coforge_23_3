@@ -12,7 +12,6 @@ const App = () => {
                 
                 <NavLink to='/userdata' style={{marginLeft: '100px'}}>
                 </NavLink>
-
             </nav>
 
             <Routes>
