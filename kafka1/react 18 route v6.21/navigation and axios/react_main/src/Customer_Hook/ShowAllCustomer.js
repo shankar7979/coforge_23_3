@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
 import CustomerService from "./services/CustomerService";
+import { useNavigate } from "react-router-dom";
 const ShowAllCustomer = () => {
     const [customer, getAllCustomer] = useState([]);
+    const navigate = useNavigate();
 
     useEffect(() => {
         new CustomerService().getAllCustomer()
@@ -14,7 +16,7 @@ const ShowAllCustomer = () => {
     }, [])
 
     return (
-        <div className="container text-dark p-5  w-50 mt-5" style={{'marginLeft':'200 pt'}}>
+        <div className="container bg-secondary text-warning p-5  w-50 mt-5" style={{ 'marginLeft': '200 pt' }}>
             <h1>all customer</h1>
             <table className="table table-striped table-bordered" >
                 <tr>
@@ -32,6 +34,9 @@ const ShowAllCustomer = () => {
                     )
                 }
             </table>
+            <button type="button" className="btn btn-primary" onClick={(a) =>
+                navigate('/searchbyid')
+            }>Search By Id</button>
         </div>
     )
 }

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import CustomerService from './services/CustomerService';
+import { useNavigate } from 'react-router-dom';
 
 function SearchCustomer() {
     const [id, setId] = useState('');
@@ -10,11 +11,15 @@ function SearchCustomer() {
     const [customer_hidden1, setCustomerHidden1] = useState(true);
     const [customer_hidden2, setCustomerHidden2] = useState(true);
 
+    const navigate = useNavigate();
+
     useEffect(() => {
 
     })
-    const findById = async () => {
-        await new CustomerService().getCustomerById(id)
+    //const findById = async () => {
+    const findById =() => {
+        //await 
+        new CustomerService().getCustomerById(id)
             .then(response => {
                 setCustomer(response.data)
                 setCustomerFound(true)
@@ -24,16 +29,13 @@ function SearchCustomer() {
             })
             .catch(e => {
                 setError(e.response.data)
-                console.log(e);
-                console.log(e.response.data);
-                console.log('error is ' + e.response.data);
                 setCustomerHidden2(false);
                 setCustomerHidden1(true);
             })
     }
     return (
         <div className='container'>
-            <div className='bg-info p-5 m-5 w-75' style={{'border-radius':'20pt'}}>
+            <div className='bg-info p-5 m-5 w-75' style={{ 'border-radius': '20pt' }}>
                 <h1>Search Customer </h1>
                 <div className="form-group" >
                     <label>Enter Id</label>
@@ -54,10 +56,14 @@ function SearchCustomer() {
                     <div className="text-danger mt-2">{err_id}</div>
                 </div>
                 <div>
-                    <button type="submit" className='mt-2 btn btn-primary'  onClick={findById}>Submit</button>
+                    <button type="submit" className='mt-2 btn btn-primary' onClick={findById}>Submit</button>
+                    <button type="button" className='mt-2 btn btn-primary' style={{'marginLeft':'5px'}} onClick={(a) =>
+                        navigate('/allcustomer/')
+                    }>ShowAll</button>
                 </div>
+                
             </div>
-            <div hidden={customer_hidden1} className='bg-warning p-5 m-5 w-75' style={{'border-radius':'20pt'}}>
+            <div hidden={customer_hidden1} className='bg-warning p-5 m-5 w-75' style={{ 'border-radius': '20pt' }}>
                 {
                     customer_found &&
                     <div>
@@ -68,7 +74,7 @@ function SearchCustomer() {
                     </div>
                 }
             </div>
-            <div hidden={customer_hidden2} className='bg-danger p-5 m-5 w-75' style={{'border-radius':'20pt'}}>
+            <div hidden={customer_hidden2} className='bg-danger p-5 m-5 w-75' style={{ 'border-radius': '20pt' }}>
                 {
                     (!customer_found) &&
                     <div>
