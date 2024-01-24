@@ -1,23 +1,23 @@
 import { NavLink, Route, Routes} from 'react-router-dom'
-import UserForm from "./User/UserForm";
-import UserData from "./User/UserData";
+import ShowAllCustomer from './Customer_Hook/ShowAllCustomer';
+import SearchCustomer from './Customer_Hook/SearchCustomer';
 
 const App = () => {
     return (
         <div>
             <nav className="nav navbar-light bg-light text-white navbar-expand-sm w-50" style={{'marginLeft':'350px'}}>
-                <NavLink to='/userform' style={{marginLeft: '100px'}}>
-                    User Form
+                <NavLink to='/allcustomer' style={{marginLeft: '100px'}}>
+                    All Customer
                 </NavLink>
-                
-                <NavLink to='/userdata' style={{marginLeft: '100px'}}>
+                <NavLink to='/searchbyid' style={{marginLeft: '100px'}}>
+                    Search Customer
                 </NavLink>
             </nav>
 
             <Routes>
-                <Route path="/" element={<UserForm/>}/>
-                <Route path="/userform" element={<UserForm/>}/>
-                <Route path="/userdata" element={<UserData/>}/>
+                <Route path="/" element={<ShowAllCustomer/>}/>
+                <Route path="/allcustomer" element={<ShowAllCustomer/>}/>
+                <Route path="/searchbyid" element={<SearchCustomer></SearchCustomer>} />
             </Routes>
         </div>
     )
