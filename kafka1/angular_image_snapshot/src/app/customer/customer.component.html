@@ -1,0 +1,25 @@
+<h2>Customer Page</h2>
+<p>
+  {{x}}
+</p>
+
+<p *ngFor="let x1 of x;index as i ">
+
+Hi..  {{x1}} ---> index is {{i}}<br>
+</p>
+
+
+<div *ngFor="let img1  of img; let i=index">
+<p>
+   <img src='{{"assets/img"+i+1+".jpg"}}'/>
+</p>
+</div>
+
+<img src="./assets/img1.jpg"  width="150" height="100">
+<br>
+<img [src]='"assets/img1.jpg"' width="150" height="100">
+<br>
+<img src='{{ "assets/img1.jpg"}}' width="150" height="100">
+
+
+
