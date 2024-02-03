@@ -1,4 +1,11 @@
 
-<app-product></app-product>
-<app-customer></app-customer>
+<!-- <app-product></app-product>
+<app-customer></app-customer> -->
+
+<ul>
+  <li><a routerLink="customer">Customer</a></li>
+  <li><a routerLink="product">Product</a></li>
+  <li><a [routerLink]="['/searchproduct/:id']">Search Product</a></li>
+  <!-- <li><a [routerLink]="['/searchproduct/:id', 3]">Search Product</a></li> -->
+</ul>
 <router-outlet></router-outlet>
