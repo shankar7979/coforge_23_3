@@ -11,17 +11,15 @@ import { ActivatedRoute } from '@angular/router';
   styleUrl: './searchproduct.component.css'
 })
 export class SearchproductComponent {
-  prdid:string='';
+  prdid:number=0;
   prdname:string='';
+  prdcost:number=0;
+  
   constructor(private route:ActivatedRoute){}
 
   ngOnInit(): void {
-
     this.prdid=this.route.snapshot.params['id']
     this.prdname=this.route.snapshot.params['name']
-
-    // this.prdid=this.route.snapshot.paramMap.get("id");
-    console.log('search parameter id is '+this.prdid)
-    console.log('search parameter name  is '+this.prdname)
+    this.prdcost=this.route.snapshot.params['cost']
   }
 }
