@@ -9,7 +9,7 @@ import { JwtClientService } from '../jwt-client.service';
 export class SecurityComponent implements OnInit {
 
   authRequest: any = {
-    "userName": "javatechie",
+    "userName": "shankar",
     "password": "password"
   };
 
