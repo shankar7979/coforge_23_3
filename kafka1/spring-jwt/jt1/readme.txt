@@ -21,8 +21,5 @@ spring-security-jwt-example
 angular 16.2.0
 spring boot 2.2.2.RELEASE
 
-
-
-
 run angular
 
