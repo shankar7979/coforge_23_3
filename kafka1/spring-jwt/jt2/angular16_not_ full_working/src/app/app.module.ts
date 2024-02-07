@@ -8,6 +8,7 @@ import { UserComponent } from './user/user.component';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { RouterTestingModule } from "@angular/router/testing";
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -18,9 +19,18 @@ import { RouterTestingModule } from "@angular/router/testing";
   imports: [
     RouterTestingModule,
     BrowserModule,RouterModule,
+    AppRoutingModule,
     HttpClientModule,FormsModule
   ],
-  providers: [JwtClientService],
+
+  // imports: [
+  //   BrowserModule,
+  //   AppRoutingModule,
+  //   FormsModule
+  // ],
+
+  // providers: [JwtClientService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
