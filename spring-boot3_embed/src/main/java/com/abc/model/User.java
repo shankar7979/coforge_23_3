@@ -18,6 +18,7 @@ public class User {
     Address address;
 
     @ElementCollection(fetch = FetchType.EAGER)
-     Set<Car> carSet;
+   // @CollectionTable(name="mycarcollection", joinColumns=@JoinColumn(name="mycar_id"))
+    Set<Car> carSet;
 
 }
