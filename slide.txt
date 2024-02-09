@@ -92,6 +92,15 @@ agile scrum slide
 https://drive.google.com/drive/folders/1RO8vAlkgbyaE3Lt-2rEvuoeu4pBGYkm9?usp=sharing
 software link
 
+software
+
+
+LTS   -- Long Term Support 
+       java 8 
+       java 17
+
+https://download.oracle.com/java/17/latest/jdk-17_windows-x64_bin.msi
+
 jdk link
 https://www.oracle.com/in/java/technologies/downloads/#jdk20-windows
 https://download.oracle.com/java/17/latest/jdk-17_windows-x64_bin.msi
