@@ -1,17 +1,3 @@
-Test Title: 23DIM3623 - Coforge LTD_Final Assessment - 29th Jan 24
-
-Test Link: https://app.mymapit.in/code4/tiny/hBcS9W
-
-Invitation opens at: Mon, Jan 29, 2024, 11:00 AM, IST
-
-Invitation closes at: Mon, Jan 29, 2024, 9:00 PM, IST
-
-Test Duration: 90 Mins
-
-=============================================================
-
-
-
 project link 
 https://drive.google.com/drive/folders/1T-PjXJRBpmc1P44Fgc6dueq343oC41Ix?usp=sharing
 
@@ -83,8 +69,24 @@ react slide
 
 https://drive.google.com/drive/folders/1YPDVEw41EFYzN9y9lDOvOvghYb8EKPM0?usp=sharing
 
+docker slide
+https://drive.google.com/drive/folders/1_WA0auE1xvZsPqUxmQa-m4HyLsDuvW-W?usp=sharing
+
+kubernetes slide
+https://drive.google.com/drive/folders/1ZfvhcIfyowCbpWUSVHaxPiHEs4r59lAW?usp=sharing
+
+gcp slide
+https://drive.google.com/drive/folders/19sdhzhlxHVXP5duNnItBS_uLErbfKUkk?usp=sharing
+
+aws slide  
+https://drive.google.com/drive/folders/10OPi4Y2iQG3srg1wvzEpf59uxfraMlgG?usp=sharing
 
 
+git jenkin slide
+https://drive.google.com/drive/folders/1GnMAflZ3PcwNX_OV0Wygy5W1o0dAXEex?usp=sharing
+
+agile scrum slide 
+https://drive.google.com/drive/folders/1RO8vAlkgbyaE3Lt-2rEvuoeu4pBGYkm9?usp=sharing
 software link
 
 jdk link
